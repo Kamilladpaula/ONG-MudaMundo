@@ -1,0 +1,122 @@
+<div class="main-header">
+    <h1>Financeiro do Projeto</h1>
+    <p>Registre novas transações e acompanhe o extrato dos projetos que você coordena.</p>
+</div>
+
+<div class="form-cadastro" style="margin-bottom: 50px;">
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Registrar Nova Transação</legend>
+            <div class="form-group">
+                <label for="proj-trans-descricao">Descrição</label>
+                <input type="text" id="proj-trans-descricao" name="proj-trans-descricao" required
+                    placeholder="Ex: Compra de ferramentas, Recebimento de doação local">
+            </div>
+
+            <div class="form-grid-3">
+                <div class="form-group">
+                    <label for="proj-trans-valor">Valor (R$)</label>
+                    <input type="number" id="proj-trans-valor" name="proj-trans-valor" required placeholder="150.00"
+                        step="0.01" min="0">
+                </div>
+                <div class="form-group">
+                    <label>Tipo</label>
+                    <div class="frequencia-options">
+                        <label><input type="radio" name="proj-trans-tipo" value="entrada"
+                                checked><span>Entrada</span></label>
+                        <label><input type="radio" name="proj-trans-tipo" value="saida"><span>Saída</span></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="proj-trans-data">Data</label>
+                    <input type="date" id="proj-trans-data" name="proj-trans-data" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="proj-trans-projeto">Associar ao Meu Projeto</label>
+                <select id="proj-trans-projeto" name="proj-trans-projeto" required>
+                    <option value="" disabled selected>Selecione um dos seus projetos</option>
+                    <option value="reflorestamento">Reflorestamento Comunitário</option>
+                    <option value="hortas-urbanas">Hortas Urbanas Comunitárias</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="proj-trans-comprovante">Anexar Comprovante (Opcional)</label>
+                <div class="input-file-wrapper">
+                    <input type="file" id="proj-trans-comprovante" name="proj-trans-comprovante"
+                        accept="image/jpeg, image/png, application/pdf">
+                    <label for="proj-trans-comprovante" class="input-file-label">Escolher arquivo...</label>
+                    <span class="input-file-name">Nenhum arquivo selecionado</span>
+                </div>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="btn-principal">Adicionar Transação</button>
+    </form>
+</div>
+
+
+<div class="relatorio-projeto">
+    <div class="main-header" style="margin-top: 40px; border-top: 1px solid var(--cor-borda); padding-top: 40px;">
+        <h2>Extrato Recente</h2>
+        <div class="filtro-extrato">
+            <label for="filtro-projeto-extrato">Visualizar extrato do projeto:</label>
+            <select id="filtro-projeto-extrato" name="filtro-projeto-extrato">
+                <option value="reflorestamento">Reflorestamento Comunitário</option>
+                <option value="hortas-urbanas">Hortas Urbanas Comunitárias</option>
+            </select>
+        </div>
+    </div>
+
+    <table class="tabela-dados">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Descrição</th>
+                <th style="text-align: right;">Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>08/10/2025</td>
+                <td>Recebimento de doação local</td>
+                <td class="valor-entrada" style="text-align: right;">+ R$ 250,00</td>
+            </tr>
+            <tr>
+                <td>07/10/2025</td>
+                <td>Compra de pás e ferramentas</td>
+                <td class="valor-saida" style="text-align: right;">- R$ 110,50</td>
+            </tr>
+            <tr>
+                <td>05/10/2025</td>
+                <td>Aquisição de sementes e adubo</td>
+                <td class="valor-saida" style="text-align: right;">- R$ 85,00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"><strong>Saldo Atual do Projeto:</strong></td>
+                <td style="text-align: right;"><strong>R$ 54,50</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="filtro-acoes" style="justify-content: flex-end;">
+        <button type="button" class="btn-secundario" id="btn-exportar-parcial">Exportar Extrato (PDF)</button>
+    </div>
+</div>
+
+<script>
+    const inputFileFinanceiro = document.getElementById('proj-trans-comprovante');
+    const inputFileNameFinanceiro = inputFileFinanceiro.closest('.input-file-wrapper').querySelector('.input-file-name');
+    if (inputFileFinanceiro && inputFileNameFinanceiro) {
+        inputFileFinanceiro.addEventListener('change', function () {
+            if (this.files && this.files.length > 0) {
+                inputFileNameFinanceiro.textContent = this.files[0].name;
+            } else {
+                inputFileNameFinanceiro.textContent = 'Nenhum arquivo selecionado';
+            }
+        });
+    }
+</script>

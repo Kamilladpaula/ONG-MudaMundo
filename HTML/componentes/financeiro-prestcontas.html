@@ -1,0 +1,77 @@
+<div class="main-header">
+    <h1>Prestação de Contas Geral</h1>
+    <p>Consolide, exporte e publique os relatórios financeiros da organização.</p>
+</div>
+
+<div class="filtro-relatorios" style="padding: 20px; margin-bottom: 30px;">
+    <form action="#" id="form-filtros-prestacao-contas">
+        <div class="form-group" style="max-width: 400px;">
+            <label for="rel-periodo">Selecione o Período para Análise</label>
+            <select id="rel-periodo" name="rel-periodo">
+                <option value="mes-atual" selected>Mês Atual (Outubro/2025)</option>
+                <option value="mes-anterior">Mês Anterior (Setembro/2025)</option>
+                <option value="trimestre-atual">3º Trimestre de 2025</option>
+                <option value="ano-corrente">Ano de 2025</option>
+            </select>
+        </div>
+    </form>
+</div>
+
+<div class="relatorio-prestacao-contas">
+
+    <div class="resumo-financeiro dashboard-grid">
+        <div class="stat-card">
+            <h3>Total de Entradas</h3>
+            <p class="stat-numero valor-entrada">+ R$ 28.950,00</p>
+        </div>
+        <div class="stat-card">
+            <h3>Total de Saídas</h3>
+            <p class="stat-numero valor-saida">- R$ 21.400,00</p>
+        </div>
+        <div class="stat-card">
+            <h3>Saldo do Período</h3>
+            <p class="stat-numero">R$ 7.550,00</p>
+        </div>
+    </div>
+
+    <div class="detalhamento-categorias">
+        <h2>Detalhamento de Saídas por Categoria</h2>
+        <ul>
+            <li>
+                <div class="categoria-info">
+                    <span class="categoria-nome">Recursos Humanos / Salários</span>
+                    <span class="categoria-valor">R$ 12.000,00</span>
+                </div>
+                <progress value="56" max="100"></progress>
+            </li>
+            <li>
+                <div class="categoria-info">
+                    <span class="categoria-nome">Material de Campo (Projetos)</span>
+                    <span class="categoria-valor">R$ 5.500,00</span>
+                </div>
+                <progress value="26" max="100"></progress>
+            </li>
+            <li>
+                <div class="categoria-info">
+                    <span class="categoria-nome">Infraestrutura e Custos Administrativos</span>
+                    <span class="categoria-valor">R$ 2.800,00</span>
+                </div>
+                <progress value="13" max="100"></progress>
+            </li>
+            <li>
+                <div class="categoria-info">
+                    <span class="categoria-nome">Marketing e Divulgação</span>
+                    <span class="categoria-valor">R$ 1.100,00</span>
+                </div>
+                <progress value="5" max="100"></progress>
+            </li>
+        </ul>
+    </div>
+
+    <div class="acoes-relatorio">
+        <button type="button" class="btn-secundario">Exportar (PDF)</button>
+        <button type="button" class="btn-secundario">Exportar (Excel)</button>
+        <button type="button" class="btn-principal">Publicar na Transparência</button>
+    </div>
+
+</div>

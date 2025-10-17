@@ -1,0 +1,42 @@
+<div class="main-header">
+    <h1>Editar Projeto</h1>
+    <p>Você está editando o projeto: <strong>Reflorestamento Comunitário</strong></p>
+</div>
+
+<form class="form-cadastro" action="#" method="POST">
+
+    <fieldset>
+        <legend>Informações do Projeto</legend>
+        <div class="form-group">
+            <label for="edit-nome-projeto">Nome do Projeto</label>
+            <input type="text" id="edit-nome-projeto" name="nome-projeto" required value="Reflorestamento Comunitário">
+        </div>
+
+        <div class="form-grid-2">
+            <div class="form-group">
+                <label for="edit-coord-projeto">Coordenador Responsável</label>
+                <input type="text" id="edit-coord-projeto" name="coord-projeto" required value="Carlos Souza">
+            </div>
+            <div class="form-group">
+                <label for="edit-status-projeto">Status do Projeto</label>
+                <select id="edit-status-projeto" name="status-projeto" required>
+                    <option value="planejamento">Em Planejamento</option>
+                    <option value="ativo" selected>Ativo</option>
+                    <option value="pausado">Em Pausa</option>
+                    <option value="concluido">Concluído</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="edit-desc-projeto">Descrição</label>
+            <textarea id="edit-desc-projeto" name="desc-projeto" rows="5"
+                required>Trabalhamos com comunidades locais para plantar árvores nativas e restaurar áreas degradadas, focando em espécies que auxiliam na recuperação de nascentes.</textarea>
+        </div>
+    </fieldset>
+
+    <div class="form-acoes-duplas">
+        <button type="button" class="btn-perigo">Excluir Projeto</button>
+        <button type="submit" class="btn-principal">Salvar Alterações</button>
+    </div>
+</form>

@@ -1,0 +1,104 @@
+<div class="main-header">
+    <h1>Registrar Nova Transação</h1>
+    <p>Adicione uma nova entrada (receita) ou saída (despesa) ao sistema financeiro da ONG.</p>
+</div>
+
+<form class="form-cadastro" action="#" method="POST" enctype="multipart/form-data">
+
+    <fieldset>
+        <legend>Detalhes da Transação</legend>
+        <div class="form-group">
+            <label for="trans-descricao">Descrição</label>
+            <input type="text" id="trans-descricao" name="trans-descricao" required
+                placeholder="Ex: Doação de Empresa X, Compra de material de escritório">
+        </div>
+
+        <div class="form-grid-3">
+            <div class="form-group">
+                <label for="trans-valor">Valor (R$)</label>
+                <input type="number" id="trans-valor" name="trans-valor" required placeholder="150.00" step="0.01"
+                    min="0">
+            </div>
+
+            <div class="form-group">
+                <label>Tipo de Transação</label>
+                <div class="frequencia-options">
+                    <label><input type="radio" name="trans-tipo" value="entrada" checked><span>Entrada</span></label>
+                    <label><input type="radio" name="trans-tipo" value="saida"><span>Saída</span></label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="trans-data">Data da Transação</label>
+                <input type="date" id="trans-data" name="trans-data" required>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Classificação e Documentação</legend>
+        <div class="form-grid-2">
+            <div class="form-group">
+                <label for="trans-projeto">Associar ao Projeto</label>
+                <select id="trans-projeto" name="trans-projeto">
+                    <option value="administrativo" selected>Nenhum / Custo Administrativo</option>
+                    <option value="reflorestamento">Reflorestamento Comunitário</option>
+                    <option value="vida-selvagem">Proteção da Vida Selvagem</option>
+                    <option value="hortas-urbanas">Hortas Urbanas Comunitárias</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="trans-categoria">Categoria</label>
+                <select id="trans-categoria" name="trans-categoria" required>
+                    <optgroup label="Categorias de Entrada">
+                        <option value="doacao-pf">Doação Pessoa Física</option>
+                        <option value="doacao-pj">Doação Corporativa</option>
+                        <option value="venda-produtos">Venda de Produtos</option>
+                        <option value="outra-receita">Outras Receitas</option>
+                    </optgroup>
+                    <optgroup label="Categorias de Saída">
+                        <option value="material-campo">Material de Campo</option>
+                        <option value="salarios">Recursos Humanos / Salários</option>
+                        <option value="marketing">Marketing e Divulgação</option>
+                        <option value="infraestrutura">Infraestrutura / Aluguel</option>
+                        <option value="outra-despesa">Outras Despesas</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="trans-comprovante">Anexar Comprovante (Opcional)</label>
+            <div class="input-file-wrapper">
+                <input type="file" id="trans-comprovante" name="trans-comprovante"
+                    accept="image/jpeg, image/png, application/pdf">
+                <label for="trans-comprovante" class="input-file-label">Escolher arquivo...</label>
+                <span class="input-file-name">Nenhum arquivo selecionado</span>
+            </div>
+            <small>Formatos aceitos: PDF, JPG, PNG.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="trans-notas">Notas Adicionais</label>
+            <textarea id="trans-notas" name="trans-notas" rows="3"
+                placeholder="Qualquer detalhe extra sobre a transação..."></textarea>
+        </div>
+    </fieldset>
+
+    <button type="submit" class="btn-principal">Registrar Transação</button>
+</form>
+
+<script>
+    const inputFile = document.getElementById('trans-comprovante');
+    const inputFileName = document.querySelector('.input-file-name');
+    if (inputFile && inputFileName) {
+        inputFile.addEventListener('change', function () {
+            if (this.files && this.files.length > 0) {
+                inputFileName.textContent = this.files[0].name;
+            } else {
+                inputFileName.textContent = 'Nenhum arquivo selecionado';
+            }
+        });
+    }
+</script>

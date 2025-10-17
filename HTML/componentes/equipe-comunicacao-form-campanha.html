@@ -1,0 +1,66 @@
+<div class="main-header">
+    <h1>Gerenciar Campanha</h1>
+    <p>Crie uma nova campanha de arrecadação ou atualize uma já existente.</p>
+</div>
+
+<form class="form-cadastro" action="#" method="POST" enctype="multipart/form-data">
+
+    <fieldset>
+        <legend>Informações Principais</legend>
+        <div class="form-group">
+            <label for="campanha-titulo">Título da Campanha</label>
+            <input type="text" id="campanha-titulo" name="campanha-titulo" required
+                placeholder="Ex: SOS Animais do Cerrado">
+        </div>
+        <div class="form-group">
+            <label for="campanha-subtitulo">Subtítulo (Chamada Curta)</label>
+            <input type="text" id="campanha-subtitulo" name="campanha-subtitulo" required
+                placeholder="Ex: Ajude a salvar os animais feridos pelos incêndios">
+        </div>
+        <div class="form-group">
+            <label for="campanha-descricao">Descrição Completa</label>
+            <textarea id="campanha-descricao" name="campanha-descricao" rows="8" required
+                placeholder="Detalhe aqui o objetivo da campanha, a importância e como os fundos serão usados..."></textarea>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Metas e Prazos</legend>
+        <div class="form-grid-3">
+            <div class="form-group">
+                <label for="campanha-meta">Meta de Arrecadação (R$)</label>
+                <input type="number" id="campanha-meta" name="campanha-meta" required placeholder="50000.00" step="0.01"
+                    min="0">
+            </div>
+            <div class="form-group">
+                <label for="campanha-inicio">Data de Início</label>
+                <input type="date" id="campanha-inicio" name="campanha-inicio" required>
+            </div>
+            <div class="form-group">
+                <label for="campanha-fim">Data de Término</label>
+                <input type="date" id="campanha-fim" name="campanha-fim">
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Mídia e Publicação</legend>
+        <div class="form-grid-2">
+            <div class="form-group">
+                <label for="campanha-imagem">Imagem de Capa</label>
+                <input type="file" id="campanha-imagem" name="campanha-imagem" accept="image/png, image/jpeg">
+            </div>
+            <div class="form-group">
+                <label for="campanha-status">Status da Campanha</label>
+                <select id="campanha-status" name="campanha-status" required>
+                    <option value="planejamento" selected>Em Planejamento</option>
+                    <option value="ativa">Ativa</option>
+                    <option value="concluida">Concluída</option>
+                    <option value="cancelada">Cancelada</option>
+                </select>
+            </div>
+        </div>
+    </fieldset>
+
+    <button type="submit" class="btn-principal">Salvar Campanha</button>
+</form>

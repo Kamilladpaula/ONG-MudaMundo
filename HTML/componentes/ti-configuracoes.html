@@ -1,0 +1,95 @@
+<div class="main-header">
+    <h1>Configurações do Sistema</h1>
+    <p>Gerenciamento geral da plataforma, usuários, segurança e integrações.</p>
+</div>
+
+<nav class="abas-navegacao">
+    <a href="#geral" class="aba active">Geral</a>
+    <a href="#usuarios" class="aba">Usuários e Permissões</a>
+    <a href="#seguranca" class="aba">Segurança e Backups</a>
+    <a href="#integracoes" class="aba">Integrações (APIs)</a>
+</nav>
+
+<div class="abas-conteudo">
+
+    <div id="geral" class="aba-painel active">
+        <h2>Configurações Gerais</h2>
+        <form class="form-cadastro" action="#" method="POST">
+            <fieldset>
+                <legend>Informações da Organização</legend>
+                <div class="form-group">
+                    <label for="org-nome">Nome da Organização</label>
+                    <input type="text" id="org-nome" name="org-nome" value="Muda Mundo">
+                </div>
+                <div class="form-group">
+                    <label for="org-email">E-mail de Contato Principal</label>
+                    <input type="email" id="org-email" name="org-email" value="contato@mudamundo.org">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Manutenção</legend>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="maintenance-mode" name="maintenance-mode">
+                    <label for="maintenance-mode">Ativar modo de manutenção (o site público exibirá uma página "em
+                        manutenção")</label>
+                </div>
+            </fieldset>
+            <button type="submit" class="btn-principal">Salvar Configurações Gerais</button>
+        </form>
+    </div>
+
+    <div id="usuarios" class="aba-painel">
+        <h2>Gerenciamento de Usuários</h2>
+        <p>Acesse a área de gerenciamento para adicionar, editar ou remover usuários e seus níveis de acesso.</p>
+        <div class="acoes-relatorio" style="justify-content: flex-start; border-top: none; padding-top: 10px;">
+            <a href="#" class="btn-principal">Gerenciar Usuários Existentes</a>
+            <a href="#" class="btn-secundario">Criar Novo Usuário</a>
+        </div>
+    </div>
+
+    <div id="seguranca" class="aba-painel">
+        <h2>Segurança e Backups</h2>
+        <div class="card-info" style="margin-bottom: 30px;">
+            <h3>Logs de Atividade</h3>
+            <p>Acompanhe as ações mais recentes realizadas na plataforma.</p>
+            <ul class="lista-logs">
+                <li><span>09/10/2025 15:30</span> - Usuário 'Equipe de Marketing' enviou a publicação 'Mutirão de
+                    Reflorestamento' para aprovação.</li>
+                <li><span>09/10/2025 14:15</span> - Usuário 'Carlos Souza' atualizou o status do projeto 'Hortas
+                    Urbanas'.</li>
+                <li><span>09/10/2025 11:50</span> - Usuário 'Gerente Financeiro' exportou o relatório de Set/2025.</li>
+            </ul>
+        </div>
+        <div class="card-info">
+            <h3>Backups do Sistema</h3>
+            <p>Último backup realizado em: 09/10/2025 às 04:00. O próximo backup automático será em 24 horas.</p>
+            <div class="acoes-relatorio" style="justify-content: flex-start; border-top: none; padding-top: 10px;">
+                <button class="btn-secundario">Realizar Backup Manual Agora</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="integracoes" class="aba-painel">
+        <h2>Integrações Externas (APIs)</h2>
+        <form class="form-cadastro" action="#" method="POST">
+            <fieldset>
+                <legend>Chaves de API</legend>
+                <div class="form-group">
+                    <label for="api-pagamento">API de Pagamento (Gateway)</label>
+                    <input type="password" id="api-pagamento" name="api-pagamento"
+                        value="********-****-****-****-************">
+                </div>
+                <div class="form-group">
+                    <label for="api-mapas">API do Google Maps</label>
+                    <input type="password" id="api-mapas" name="api-mapas" value="********-****-****-****-************">
+                </div>
+                <div class="form-group">
+                    <label for="api-cep">API de CEP (ViaCEP)</label>
+                    <input type="text" id="api-cep" name="api-cep" placeholder="Não requer chave de API">
+                </div>
+            </fieldset>
+            <button type="submit" class="btn-principal">Salvar Chaves de API</button>
+        </form>
+    </div>
+
+</div>

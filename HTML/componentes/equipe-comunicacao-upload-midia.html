@@ -1,0 +1,76 @@
+<div class="main-header">
+    <h1>Upload de Mídia</h1>
+    <p>Adicione novas fotos e vídeos à biblioteca de mídia da organização.</p>
+</div>
+
+<form class="form-cadastro" action="#" method="POST" enctype="multipart/form-data">
+
+    <fieldset>
+        <legend>Arquivos</legend>
+        <div class="form-group">
+            <label for="media-files">Selecione as fotos ou vídeos</label>
+            <div class="input-file-wrapper">
+                <input type="file" id="media-files" name="media-files[]" multiple
+                    accept="image/jpeg, image/png, image/gif, video/mp4, video/quicktime">
+                <label for="media-files" class="input-file-label">Escolher arquivos...</label>
+                <span class="input-file-name">Nenhum arquivo selecionado</span>
+            </div>
+            <small>Você pode selecionar múltiplos arquivos. Formatos aceitos: JPG, PNG, GIF, MP4, MOV.</small>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Informações da Mídia</legend>
+        <div class="form-group">
+            <label for="media-titulo">Título (para um lote de arquivos)</label>
+            <input type="text" id="media-titulo" name="media-titulo" required
+                placeholder="Ex: Mutirão de Reflorestamento - Outubro 2025">
+        </div>
+
+        <div class="form-group">
+            <label for="media-descricao">Descrição / Legenda</label>
+            <textarea id="media-descricao" name="media-descricao" rows="4"
+                placeholder="Descreva o que está acontecendo na(s) foto(s)/vídeo(s)..."></textarea>
+        </div>
+
+        <div class="form-grid-2">
+            <div class="form-group">
+                <label for="media-creditos">Créditos (Fotógrafo/Fonte)</label>
+                <input type="text" id="media-creditos" name="media-creditos" placeholder="Ex: Joana Silva / Voluntária">
+            </div>
+            <div class="form-group">
+                <label for="media-projeto">Associar ao Projeto</label>
+                <select id="media-projeto" name="media-projeto">
+                    <option value="" selected>Nenhum projeto específico</option>
+                    <option value="reflorestamento">Reflorestamento Comunitário</option>
+                    <option value="vida-selvagem">Proteção da Vida Selvagem</option>
+                    <option value="hortas-urbanas">Hortas Urbanas Comunitárias</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="media-tags">Tags (separadas por vírgula)</label>
+            <input type="text" id="media-tags" name="media-tags"
+                placeholder="Ex: reflorestamento, voluntários, 2025, serra da canastra">
+        </div>
+    </fieldset>
+
+    <button type="submit" class="btn-principal">Enviar Mídia</button>
+</form>
+
+<script>
+    const inputFile = document.getElementById('media-files');
+    const inputFileName = document.querySelector('.input-file-name');
+    if (inputFile && inputFileName) {
+        inputFile.addEventListener('change', function () {
+            if (this.files && this.files.length > 1) {
+                inputFileName.textContent = `${this.files.length} arquivos selecionados`;
+            } else if (this.files && this.files.length == 1) {
+                inputFileName.textContent = this.files[0].name;
+            } else {
+                inputFileName.textContent = 'Nenhum arquivo selecionado';
+            }
+        });
+    }
+</script>

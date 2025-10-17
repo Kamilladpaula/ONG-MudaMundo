@@ -1,0 +1,111 @@
+<div class="main-header">
+    <h1>Dashboard de Projetos</h1>
+    <p>Acompanhe o status e o progresso de todos os projetos da organização.</p>
+</div>
+
+<div class="dashboard-grid">
+    <div class="stat-card">
+        <h3>Total de Projetos Ativos</h3>
+        <p class="stat-numero">12</p>
+    </div>
+    <div class="stat-card">
+        <h3>Orçamento Total Executado</h3>
+        <p class="stat-numero">R$ 189.340,00</p>
+    </div>
+    <div class="stat-card">
+        <h3>Voluntários Envolvidos (Geral)</h3>
+        <p class="stat-numero">157</p>
+    </div>
+    <div class="stat-card stat-risco">
+        <h3>Projetos com Risco</h3>
+        <p class="stat-numero">2</p>
+    </div>
+</div>
+
+<div class="tabela-container">
+    <div class="tabela-header">
+        <h2>Visão Geral dos Projetos</h2>
+        <div class="filtro-tabela">
+            <input type="search" placeholder="Buscar projeto...">
+        </div>
+    </div>
+
+    <table class="tabela-dados">
+        <thead>
+            <tr>
+                <th>Nome do Projeto</th>
+                <th>Coordenador</th>
+                <th>Status</th>
+                <th>Progresso</th>
+                <th>Orçamento Usado</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Reflorestamento Comunitário</td>
+                <td>Carlos Souza</td>
+                <td><span class="status status-aprovado">Ativo</span></td>
+                <td>
+                    <progress value="75" max="100"></progress>
+                    <span>75%</span>
+                </td>
+                <td>
+                    <progress value="85" max="100" class="progresso-risco"></progress>
+                    <span>85%</span>
+                </td>
+                <td class="tabela-acoes">
+                    <a href="#" class="btn-tabela-visualizar">Ver Detalhes</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Proteção da Vida Selvagem</td>
+                <td>Ana Pereira</td>
+                <td><span class="status status-aprovado">Ativo</span></td>
+                <td>
+                    <progress value="50" max="100"></progress>
+                    <span>50%</span>
+                </td>
+                <td>
+                    <progress value="60" max="100"></progress>
+                    <span>60%</span>
+                </td>
+                <td class="tabela-acoes">
+                    <a href="#" class="btn-tabela-visualizar">Ver Detalhes</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Reciclagem e Consciência</td>
+                <td>Marcos Andrade</td>
+                <td><span class="status status-concluido">Concluído</span></td>
+                <td>
+                    <progress value="100" max="100"></progress>
+                    <span>100%</span>
+                </td>
+                <td>
+                    <progress value="98" max="100" class="progresso-risco"></progress>
+                    <span>98%</span>
+                </td>
+                <td class="tabela-acoes">
+                    <a href="#" class="btn-tabela-visualizar">Ver Detalhes</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Saneamento para Todos</td>
+                <td>Beatriz Costa</td>
+                <td><span class="status status-pendente">Em Pausa</span></td>
+                <td>
+                    <progress value="20" max="100"></progress>
+                    <span>20%</span>
+                </td>
+                <td>
+                    <progress value="15" max="100"></progress>
+                    <span>15%</span>
+                </td>
+                <td class="tabela-acoes">
+                    <a href="#" class="btn-tabela-visualizar">Ver Detalhes</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

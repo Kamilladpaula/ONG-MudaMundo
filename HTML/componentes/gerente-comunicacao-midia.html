@@ -1,0 +1,65 @@
+<div class="main-header">
+    <h1>Supervisão de Mídia</h1>
+    <p>Revise e aprove as fotos e vídeos enviados pela equipe.</p>
+</div>
+
+<div class="midia-actions-bar">
+    <div class="form-group">
+        <label for="acoes-lote">Ações em Lote:</label>
+        <select id="acoes-lote" name="acoes-lote">
+            <option>Aprovar selecionados</option>
+            <option>Recusar selecionados</option>
+        </select>
+        <button class="btn-secundario btn-pequeno">Aplicar</button>
+    </div>
+    <div class="form-group">
+        <label for="filtro-status-midia">Filtrar por Status:</label>
+        <select id="filtro-status-midia" name="filtro-status-midia">
+            <option value="pendente" selected>Pendentes</option>
+            <option value="aprovado">Aprovadas</option>
+            <option value="recusado">Recusadas</option>
+        </select>
+    </div>
+</div>
+
+<div class="midia-grid">
+
+    <div class="card-midia">
+        <div class="card-midia-checkbox">
+            <input type="checkbox" id="midia-1">
+            <label for="midia-1"></label>
+        </div>
+        <div class="card-midia-preview">
+            <img src="img/blog-plantio.jpg" alt="Voluntários plantando árvores.">
+        </div>
+        <div class="card-midia-info">
+            <p><strong>Arquivo:</strong> blog-plantio.jpg</p>
+            <p><strong>Enviado por:</strong> Equipe de Marketing</p>
+            <p><strong>Projeto:</strong> Reflorestamento</p>
+        </div>
+        <div class="card-midia-actions">
+            <button class="btn-tabela-recusar">Recusar</button>
+            <button class="btn-tabela-aprovar">Aprovar</button>
+        </div>
+    </div>
+
+    <div class="card-midia is-video">
+        <div class="card-midia-checkbox">
+            <input type="checkbox" id="midia-2">
+            <label for="midia-2"></label>
+        </div>
+        <div class="card-midia-preview">
+            <img src="img/blog-onca.jpg" alt="Onça pintada caminhando.">
+        </div>
+        <div class="card-midia-info">
+            <p><strong>Arquivo:</strong> video-onca-soltura.mp4</p>
+            <p><strong>Enviado por:</strong> Equipe de Projetos</p>
+            <p><strong>Projeto:</strong> Proteção da Vida Selvagem</p>
+        </div>
+        <div class="card-midia-actions">
+            <button class="btn-tabela-recusar">Recusar</button>
+            <button class="btn-tabela-aprovar">Aprovar</button>
+        </div>
+    </div>
+
+</div>
