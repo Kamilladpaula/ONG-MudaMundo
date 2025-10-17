@@ -39,7 +39,105 @@
     </nav>
   </header>
   <main>
-    <!-- Conteúdo principal da página -->
+    <section class="secao-banner-green">
+      <section class="banner-projetos">
+        <h2>Projetos que transformam</h2>
+        <p class="subtitulo">Acreditamos que a mudança real acontece em várias frentes, conectadas por um único
+          propósito. Conheça nossas principais frentes de atuação e o impacto que estamos criando juntos.</p>
+        <div class="filtros">
+          <label for="categoria">Categoria:</label>
+          <select id="categoria" name="categoria">
+            <option value="todos">Todas</option>
+            <option value="educacao">Educação Ambiental</option>
+            <option value="protecao-vida">Proteção da Vida</option>
+            <option value="comunidade">Comunidades</option>
+            <option value="Resgates"></option>
+          </select>
+
+          <label for="status">Status:</label>
+          <select id="status" name="status">
+            <option value="todos">Todas</option>
+            <option value="ativo">Ativo</option>
+            <option value="concluido">Concluído</option>
+          </select>
+          <label for="resultado-filtro">Projeto:</label>
+          <select name="resultado-filtro" id="resultado-filtro" disabled>
+            <option>Selecione os filtros</option>
+          </select>
+          <button id="ir-para-projeto" class="btn-filtro" disabled>Ver Projeto</button>
+        </div>
+      </section>
+    </section>
+    <section class="secao-white">
+      <section class="projetos-destaque">
+        <h1 class="titulo-secao">Nossos projetos</h1>
+        <article class="projeto-item">
+          <div class="projeto-img">
+            <img src="img/reflorestamento-1080x720.svg" alt="Imagem do projeto de reflorestamento">
+          </div>
+          <div class="projeto-texto">
+            <h2>Reflorestamento Comunitário</h2>
+            <p>Trabalhamos com comunidades locais para plantar árvores nativas e restaurar áreas degradadas.
+            </p>
+            <a href="projetos/reflorestamento.html" class="btn-projeto cor-turquesa">Saiba mais</a>
+          </div>
+        </article>
+
+        <article class="projeto-item layout-reverso">
+          <div class="projeto-img">
+            <img src="img/eduambiental-1080x720.svg" alt="Imagem do projeto de educação ambiental">
+          </div>
+          <div class="projeto-texto">
+            <h2>Educação Ambiental</h2>
+            <p>Capacitação de professores e estudantes em práticas sustentáveis e agroecológicas nas escolas
+              públicas.</p>
+            <a href="projetos/eduambiental.html" class="btn-projeto cor-roxa">Saiba mais</a>
+          </div>
+        </article>
+
+        <article class="projeto-item">
+          <div class="projeto-img">
+            <img src="img/vidaselvagem-1080x720.svg" alt="Imagem do projeto vida selvagem">
+          </div>
+          <div class="projeto-texto">
+            <h2>Vida Selvagem</h2>
+            <p>Projeto focado no resgate, tratamento e reintrodução de animais selvagens vítimas de tráfico e desmatamento.</p>
+            <a href="projetos/vida-selvagem.html" class="btn-projeto cor-turquesa">Saiba mais</a>
+          </div>
+        </article>
+
+        <article class="projeto-item layout-reverso">
+          <div class="projeto-img">
+            <img src="img/animais_enchentes-1080x810.svg" alt="Imagem do projeto de Resgates">
+          </div>
+          <div class="projeto-texto">
+            <h2>Resgates de animais em enchentes</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id iure magnam nesciunt ut, quam quasi ducimus reiciendis cupiditate, corrupti incidunt recusandae vel? Exercitationem voluptate possimus ipsa hic et? Similique, quasi?.</p>
+            <a href="projetos/resgates.html.html" class="btn-projeto cor-roxa">Saiba mais</a>
+          </div>
+        </article>
+      </section>
+    </section>
+    <section class="secao-orange">
+      <section class="chamada-acao">
+        <div class="container">
+          <h2>Faça parte da mudança</h2>
+          <p class="subtitulo">Sua ajuda, seja com tempo ou recursos, é a energia que move nosso trabalho</p>
+          <div class="acao-container">
+            <div class="acao-box">
+              <h3>Seja um Voluntário</h3>
+              <p>Doe seu tempo e talento para criar um impacto real no mundo. Sua energia trasnforma.</p>
+              <a href="voluntariado.html" class="btn-ir-pagina">Quero ser voluntário</a>
+            </div>
+            <div class="acao-box">
+              <h3>Faça uma Doação</h3>
+              <p>Cada contribuição financeira nos ajuda a ampliar nosso alcance e fortalecer nossos projetos.</p>
+              <a href="doacoes.html" class="btn-doar">Quero doar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
   </main>
   <footer>
     <div class="container">
@@ -70,4 +168,5 @@
     </div>
   </footer>
 </body>
+
 </html>

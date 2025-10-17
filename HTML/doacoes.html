@@ -39,7 +39,122 @@
     </nav>
   </header>
   <main>
-    <!-- Conteúdo principal da página -->
+    <section class="secao-banner-green">
+      <div class="container">
+        <h1>Sua Doação Cria Vida</h1>
+        <p class="subtitulo">Cada real doado é investido diretamente em nossos projetos. Sua contribuição nos ajuda a comprar equipamentos, medicamentos, mudas de árvores e a manter nossas equipes em campo. Veja como seu apoio se transforma em ação:</p>
+      </div>
+      <div class="impacto-cards">
+        <div class="card-info">
+          <h3>R$ 30</h3>
+          <p>Custeia o alimento de um animal resgatado por uma semana.</p>
+        </div>
+        <div class="card-info">
+          <h3>R$ 70</h3>
+          <p>Permite o plantio de 10 novas árvores nativas.</p>
+        </div>
+        <div class="card-info">
+          <h3>R$ 150</h3>
+          <p>Apoia uma oficina de educação ambiental para 20 crianças.</p>
+        </div>
+      </div>
+    </section>
+    <section class="secao-white">
+      <section class="campanha-ativa">
+        <h2>Apoie uma Causa Específica</h2>
+        <div class="campanha-card">
+          <h3>SOS Animais do Cerrado</h3>
+          <p class="campanha-descricao">Os incêndios recentes deixaram muitos animais feridos e sem lar.
+            Precisamos de ajuda para resgatá-los, oferecer tratamento veterinário e recuperar a área com
+            o plantio de novas árvores.</p>
+          <div class="meta-arrecadacao">
+            <div class="progresso-info">
+              <span>Arrecadado: <strong>R$ 22.500</strong></span>
+              <span>Meta: R$ 50.000</span>
+            </div>
+            <progress value="22500" max="50000"></progress>
+          </div>
+          <a href="#" class="btn-principal">Apoiar Campanha</a>
+        </div>
+      </section>
+    </section>
+    <section class="secao-orange">
+      <section class="formas-doar">
+        <div class="container">
+          <h2>Outras Formas de Doar</h2>
+          <div class="cards-doar">
+            <div class="card-info">
+              <h3>Doação Mensal</h3>
+              <p>Escolha um valor fixo para doar todo mês. Sua contribuição contínua nos ajuda a planejar e ampliar nossos projetos.</p>
+            </div>
+            <div class="card-info">
+              <h3>Doação Única</h3>
+              <p>Faça uma doação pontual no valor que desejar. Cada contribuição faz a diferença!</p>
+            </div>
+            <div class="card-info">
+              <h3>Doação de Materiais</h3>
+              <p>Doe equipamentos, medicamentos, roupas ou alimentos. Entre em contato para saber o que estamos precisando no momento.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="secao-white">
+      <div class="container">
+        <h2>Faça sua Doação Online</h2>
+        <form action="#" method="POST" class="form-doacao">
+          <fieldset>
+            <legend>1. Escolha o valor</legend>
+            <div class="valor-options">
+              <label><input type="radio" name="valor-doacao" value="30"><span>R$ 30</span></label>
+              <label><input type="radio" name="valor-doacao" value="70" checked><span>R$
+                  70</span></label>
+              <label><input type="radio" name="valor-doacao" value="150"><span>R$ 150</span></label>
+              <input type="number" name="outro-valor" placeholder="Outro Valor (R$)">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Frequência da doação</legend>
+            <div class="frequencia-options">
+              <label><input type="radio" id="unica" name="frequencia" value="unica" checked><span>Doação Única</span></label>
+              <label><input type="radio" id="mensal" name="frequencia" value="mensal"><span>Doação
+                  Mensal (Guardião)</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Método de Pagamento</legend>
+            <div class="pagamento-options">
+              <label><input type="radio" id="pix" name="pagamento" value="pix" checked><span>PIX</span></label>
+              <label><input type="radio" id="cartao" name="pagamento" value="cartao"><span>Cartão de
+                  Crédito</span></label>
+              <label><input type="radio" id="boleto" name="pagamento" value="boleto"><span>Boleto</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>4. Seus Dados</legend>
+            <div class="dados-pessoais">
+              <div class="form-group">
+                <label for="nome-doador">Nome Completo:</label>
+                <input type="text" id="nome-doador" name="nome" required>
+              </div>
+              <div class="form-group">
+                <label for="cpf-doador">CPF (para recibo):</label>
+                <input type="text" id="cpf-doador" name="cpf" placeholder="000.000.000-00" required>
+              </div>
+              <div class="form-group">
+                <label for="email-doador">E-mail:</label>
+                <input type="email" id="email-doador" name="email" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn-principal">Confirmar Doação</button>
+        </form>
+      </div>
+    </section>
   </main>
   <footer>
     <div class="container">
@@ -70,4 +185,5 @@
     </div>
   </footer>
 </body>
+
 </html>
