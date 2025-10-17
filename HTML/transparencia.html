@@ -39,7 +39,70 @@
     </nav>
   </header>
   <main>
-    <!-- Conteúdo principal da página -->
+    <section class="secao-banner-orange">
+      <div class="container">
+        <h1>Nosso Compromisso com a Confiança</h1>
+        <p class="subtitulo">Acreditamos que a transparência é fundamental. Nesta página, você tem acesso a todos os dados sobre como utilizamos os recursos que nos são confiados, garantindo que cada doação seja maximizada para o impacto.</p>
+      </div>
+    </section>
+    <section class="secao-white">
+      <div class="container">
+        <h2>Relatórios Financeiros</h2>
+        <p>Confira nossos relatórios anuais detalhados, que incluem receitas, despesas e alocação de recursos.</p>
+        <ul class="lista-relatorios">
+          <li><a href="relatorio-2024.pdf" target="_blank">
+              <img src="img/PDF-icon.svg">Relatório Anual 2024</a></li>
+          <li><a href="relatorio-2023.pdf" target="_blank">
+              <img src="img/PDF-icon.svg">Relatório Anual 2023</a></li>
+          <li><a href="relatorio-2022.pdf" target="_blank">
+              <img src="img/PDF-icon.svg">Relatório Anual 2022</a></li>
+          <li><a href="relatorio-2021.pdf" target="_blank">
+              <img src="img/PDF-icon.svg">Relatório Anual 2021</a></li>
+        </ul>
+    </section>
+    <section class="secao-green">
+      <div class="container">
+        <h2>Uso de Recursos em 2024</h2>
+        <div class="grafico-container">
+          <canvas id="graficoUsoRecursos" width="300" height="300">
+            Seu navegador não suporta o elemento canvas.
+          </canvas>
+          <ul class="legenda-grafico">
+            <li><span class="cor-educacao"></span> Educação Ambiental - 35%</li>
+            <li><span class="cor-protecao"></span> Proteção da Vida - 30%</li>
+            <li><span class="cor-comunidade"></span> Apoio a Comunidades - 20%</li>
+            <li><span class="cor-administrativo"></span> Custos Administrativos - 10%</li>
+            <li><span class="cor-recursos"></span> Captação de Recursos - 5%</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="secao-white">
+      <div class="container">
+        <h2>Prestação de Contas por Projeto</h2>
+        <p class="subtitulo">Acompanhe o andamento financeiro dos nossos principais projetos ativos.</p>
+        <div class="cards-projetos">
+          <div class="card-projeto">
+            <h3>SOS Animais do Cerrado</h3>
+            <p class="arrecadado"><strong>Total Arrecadado:</strong> R$ 22.500,00</p>
+            <p class="gasto"><strong>Total Gasto:</strong> R$ 18.750,00</p>
+            <p class="status status-andamento"><strong>Status:</strong> Em andamento</p>
+          </div>
+          <div class="card-projeto">
+            <h3>Reflorestamento da Amazônia</h3>
+            <p class="arrecadado"><strong>Total Arrecadado:</strong> R$ 120.000,00</p>
+            <p class="gasto"><strong>Total Gasto:</strong> R$ 115.280,00</p>
+            <p class="status status-andamento"><strong>Status:</strong> Em andamento</p>
+          </div>
+          <div class="card-projeto">
+            <h3>Educação Ambiental nas Escolas</h3>
+            <p class="arrecadado"><strong>Total Arrecadado:</strong> R$ 15.000,00</p>
+            <p class="gasto"><strong>Total Gasto:</strong> R$ 15.000,00</p>
+            <p class="status status-concluido"><strong>Status:</strong> Concluído</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer>
     <div class="container">
@@ -70,4 +133,5 @@
     </div>
   </footer>
 </body>
+
 </html>

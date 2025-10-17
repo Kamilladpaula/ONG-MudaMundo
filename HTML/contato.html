@@ -39,7 +39,65 @@
     </nav>
   </header>
   <main>
-    <!-- Conteúdo principal da página -->
+    <section class="secao-banner-orange">
+      <div class="container">
+        <h1>Fale Conosco</h1>
+        <p class="subtitulo">Sua mensagem é muito importante para nós. Seja para tirar dúvidas, propor parcerias ou simplesmente para conversar, nossa equipe está pronta para ouvir.</p>
+      </div>
+    </section>
+    <section class="secao-white">
+      <div class="container">
+        <div class="contato-grid">
+          <div class="contato-info">
+            <h2>Informações de Contato</h2>
+            <div class="info-item">
+              <img src="img/icone-loc.svg" alt="Ícone de localização">
+              <div>
+                <strong>Endereço:</strong>
+                <p>Av. Meio Ambiente, 123 - Bairro Verde<br>São Paulo, SP - CEP 01234-567</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <img src="img/icone-email.svg" alt="Ícone de e-mail">
+              <div>
+                <strong>E-mail:</strong>
+                <p><a href="mailto:contato@mudamundo.org">contato@mudamundo.org</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <img src="img/icone-tel.svg" alt="Ícone de telefone">
+              <div>
+                <strong>Telefone:</strong>
+                <p><a href="tel:+5511999998888">+55 (11) 99999-8888</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contato-form">
+            <h2>Envie uma Mensagem</h2>
+            <form action="#" method="post" class="form-contato">
+              <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Seu nome aqui">
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+              </div>
+              <div class="form-group">
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" name="assunto" required placeholder="Sobre o que você quer falar?">
+              </div>
+              <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="6" required placeholder="Digite sua mensagem..."></textarea>
+              </div>
+              <button type="submit" class="btn-principal">Enviar Mensagem</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer>
     <div class="container">
@@ -70,4 +128,5 @@
     </div>
   </footer>
 </body>
+
 </html>

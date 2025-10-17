@@ -39,7 +39,35 @@
     </nav>
   </header>
   <main>
-    <!-- Conteúdo principal da página -->
+    <section class="secao-banner-green">
+      <section class="login-secao">
+        <div class="container">
+          <div class="login-wrapper">
+            <h2>Acesse sua Conta</h2>
+            <p class="subtitulo-login">Bem-vindo de volta! Faça o login para continuar.</p>
+
+            <form action="#" method="POST" class="form-login">
+              <div class="form-group">
+                <label for="email-login">E-mail</label>
+                <input type="email" id="email-login" name="email-login" required placeholder="seu.email@exemplo.com">
+              </div>
+              <div class="form-group">
+                <label for="senha-login">Senha</label>
+                <input type="password" id="senha-login" name="senha-login" required placeholder="Sua senha">
+              </div>
+
+              <a href="recuperar-senha.html" class="link-esqueci-senha">Esqueceu sua senha?</a>
+
+              <button type="submit" class="btn-principal">Entrar</button>
+            </form>
+
+            <div class="login-rodape">
+              <p>Ainda não é voluntário? <a href="cadastro.html">Cadastre-se aqui</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
   </main>
   <footer>
     <div class="container">
@@ -70,4 +98,5 @@
     </div>
   </footer>
 </body>
+
 </html>
