@@ -1,0 +1,47 @@
+<div class="main-header">
+    <h1>Relatórios Financeiros</h1>
+    <p>Filtre e visualize as transações da organização por período, projeto ou categoria.</p>
+</div>
+
+<div class="filtro-relatorios form-cadastro">
+    <form action="#" id="form-filtros-relatorio">
+        <div class="form-grid-filtros">
+            <div class="form-group">
+                <label for="rel-data-inicio">Data de Início</label>
+                <input type="date" id="rel-data-inicio" name="rel-data-inicio">
+            </div>
+            <div class="form-group">
+                <label for="rel-data-fim">Data de Fim</label>
+                <input type="date" id="rel-data-fim" name="rel-data-fim">
+            </div>
+            <div class="form-group">
+                <label for="rel-tipo">Tipo de Transação</label>
+                <select id="rel-tipo" name="rel-tipo">
+                    <option value="todas" selected>Todas</option>
+                    <option value="entrada">Apenas Entradas</option>
+                    <option value="saida">Apenas Saídas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rel-projeto">Projeto</label>
+                <select id="rel-projeto" name="rel-projeto">
+                    <option value="todos" selected>Todos os Projetos</option>
+                    <option value="administrativo">Custos Administrativos</option>
+                    <option value="reflorestamento">Reflorestamento Comunitário</option>
+                    <option value="vida-selvagem">Proteção da Vida Selvagem</option>
+                    <option value="hortas-urbanas">Hortas Urbanas Comunitárias</option>
+                </select>
+            </div>
+        </div>
+        <div class="filtro-acoes">
+            <button type="button" class="btn-principal" id="btn-gerar-relatorio">Gerar Relatório</button>
+            <button type="button" class="btn-secundario" id="btn-exportar-relatorio">Exportar (PDF)</button>
+        </div>
+    </form>
+</div>
+
+<div class="resultado-relatorio">
+    <p class="placeholder-relatorio">Selecione os filtros acima e clique em "Gerar Relatório" para visualizar os dados.
+    </p>
+
+</div>

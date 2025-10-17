@@ -1,0 +1,89 @@
+<div class="main-header">
+    <h1>Gerenciar Usuários e Permissões</h1>
+    <p>Adicione, edite, remova e gerencie os níveis de acesso de todos os usuários da plataforma.</p>
+</div>
+
+<div class="tabela-header">
+    <a href="#" class="btn-principal">Adicionar Novo Usuário</a>
+    <div class="filtro-tabela">
+        <input type="search" placeholder="Buscar por nome ou e-mail...">
+    </div>
+</div>
+
+<table class="tabela-dados tabela-gerenciamento">
+    <thead>
+        <tr>
+            <th style="width: 20px;"><input type="checkbox" id="selecionar-todos"></th>
+            <th>Nome do Usuário</th>
+            <th>Perfil de Acesso</th>
+            <th>Status</th>
+            <th>Último Acesso</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>
+                <strong>Joana Silva</strong>
+                <small>joana.silva@email.com</small>
+            </td>
+            <td>
+                <select name="perfil-usuario-1">
+                    <option value="diretor" selected>Diretor Geral</option>
+                    <option value="gerente-fin">Gerente Financeiro</option>
+                    <option value="gerente-proj">Gerente de Projetos</option>
+                    <option value="voluntario">Voluntário</option>
+                </select>
+            </td>
+            <td><span class="status status-aprovado">Ativo</span></td>
+            <td>09/10/2025 às 14:30</td>
+            <td class="tabela-acoes">
+                <a href="#" class="btn-tabela-editar" title="Editar Usuário">Editar</a>
+                <a href="#" class="btn-tabela-remover" title="Remover Usuário">Remover</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>
+                <strong>Equipe de Projetos</strong>
+                <small>projetos@mudamundo.org</small>
+            </td>
+            <td>
+                <select name="perfil-usuario-2">
+                    <option value="diretor">Diretor Geral</option>
+                    <option value="gerente-fin">Gerente Financeiro</option>
+                    <option value="equipe-proj" selected>Equipe de Projetos</option>
+                    <option value="voluntario">Voluntário</option>
+                </select>
+            </td>
+            <td><span class="status status-aprovado">Ativo</span></td>
+            <td>09/10/2025 às 11:15</td>
+            <td class="tabela-acoes">
+                <a href="#" class="btn-tabela-editar" title="Editar Usuário">Editar</a>
+                <a href="#" class="btn-tabela-remover" title="Remover Usuário">Remover</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>
+                <strong>Mariana Lima (Voluntária)</strong>
+                <small>mari.lima@email.com</small>
+            </td>
+            <td>
+                <select name="perfil-usuario-3">
+                    <option value="diretor">Diretor Geral</option>
+                    <option value="gerente-fin">Gerente Financeiro</option>
+                    <option value="equipe-proj">Equipe de Projetos</option>
+                    <option value="voluntario" selected>Voluntário</option>
+                </select>
+            </td>
+            <td><span class="status status-inativo">Inativo</span></td>
+            <td>25/09/2025 às 09:00</td>
+            <td class="tabela-acoes">
+                <a href="#" class="btn-tabela-editar" title="Editar Usuário">Editar</a>
+                <a href="#" class="btn-tabela-remover" title="Remover Usuário">Remover</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
