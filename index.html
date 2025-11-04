@@ -8,8 +8,10 @@
   <title>Muda Mundo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Gudea:ital,wght@0,400;0,700;1,400&family=Signika:wght@300..700&display=swap" rel="stylesheet" />
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="../js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -20,10 +22,21 @@
           <img src="img/Logo-64px.svg" alt="Voltar para a página inicial" />
         </a>
         <ul class="nav-menu">
-          <li><a href="HTML/sobre.html">Sobre Nós</a></li>
+          <li>
+            <a href="HTML/sobre.html" class="tem-submenu">Sobre Nós</a>
+            <ul class="submenu">
+              <li><a href="HTML/sobre.html#historia">Nossa História</a></li>
+              <li><a href="HTML/sobre.html#equipe">Nossa Equipe</a></li>
+            </ul>
+          </li>
           <li><a href="HTML/projetos.html">Projetos</a></li>
-          <li><a href="HTML/voluntariado.html">Voluntariado</a></li>
-          <li><a href="HTML/doacoes.html">Doações</a></li>
+          <li>
+            <a href="HTML/voluntariado.html" class="tem-submenu">Voluntariado</a>
+            <ul class="submenu">
+              <li><a href="HTML/cadastro.html">Cadastre-se</a></li>
+            </ul>
+          </li>
+          <li> <a href="HTML/doacoes.html">Doações</a></li>
           <li><a href="HTML/transparencia.html">Transparência</a></li>
           <li><a href="HTML/blog.html">Blog</a></li>
           <li><a href="HTML/contato.html">Contato</a></li>
@@ -39,73 +52,98 @@
     </nav>
   </header>
   <main>
-    <section class="secao-banner-green">
-      <img src="img/Banner-1920x620.svg" alt="Banner principal da ONG" class="banner-principal" />
+    <section class="secao-entrada">
+      <img src="img/Banner-novo.svg" alt="Banner principal da ONG" class="banner-principal" />
       <div class="banner-container">
         <h1>Muda Mundo</h1>
         <h2>Conexões que criam vida</h2>
-        <p1>Acreditamos que a saúde do planeta, o bem-estar dos animais e a felicidade da humanidade estão interligados.</p1>
-        <p2>Junte-se a nós para fazer a diferença!</p2>
-        <a href="voluntariado.html" class="btn-faca-parte">Faça parte da MUDANÇA!</a>
+        <p>Acreditamos que a saúde do planeta, o bem-estar dos animais e a felicidade da humanidade estão interligados.</p>
+        <p>Junte-se a nós para fazer a diferença!</p>
+        <a href="../HTML/voluntariado.html" class="btn-faca-parte">Faça parte da MUDANÇA!</a>
       </div>
     </section>
-    <section class="secao-white">
-      <section class="resumo">
-        <p>
-          Desde 2022, atuamos para fortalecer a conexão entre as pessoas e a natureza, promovendo o equilíbrio completo dos ecossistemas.
-        </p>
-        <p>
-          Nossos projetos estão alinhados com quatro pilares essenciais:
-          <li>Educação Ambiental</li>
-          <li>Apoio a Comunidades</li>
-          <li>Proteção da Vida Selvagem</li>
-          <li>Incentivo a Práticas Sustentáveis</li>
-          <strong>Saiba mais sobre nosso impacto e como você pode ajudar</strong>
-        </p>
+    <div class="container">
+      <!-- Alerta de campanha atual -->
+      <div class="alert alert-info" role="alert">
+        <strong>Campanha em Andamento:</strong> Ajude-nos a plantar mais 1.000 árvores neste mês!
+        <a href="HTML/doacoes.html#campanhas" class="btn btn-principal">Participar</a>
+      </div>
+      <section class="secao-white">
+        <div class="grid">
+          <div class="col-12 col-md-8 col-lg-6">
+            <section class="resumo">
+              <p>
+                Desde 2022, atuamos para fortalecer a conexão entre as pessoas e a natureza, promovendo o equilíbrio completo dos ecossistemas.
+              </p>
+              <p>
+                Nossos projetos estão alinhados com quatro pilares essenciais:
+              </p>
+              <ul>
+                <li>
+                  <span class="badge badge-primario">Educação Ambiental</span>
+                  Promovendo consciência e ação
+                </li>
+                <li>
+                  <span class="badge badge-secundario">Apoio a Comunidades</span>
+                  Fortalecendo laços locais
+                </li>
+                <li>
+                  <span class="badge badge-info">Proteção da Vida Selvagem</span>
+                  Preservando a biodiversidade
+                </li>
+                <li>
+                  <span class="badge badge-alerta">Práticas Sustentáveis</span>
+                  Construindo um futuro melhor
+                </li>
+              </ul>
+              <strong>Saiba mais sobre nosso impacto e como você pode ajudar</strong>
+            </section>
+          </div>
+        </div>
       </section>
-    </section>
-    <section class="secao-orange">
       <section class="inspiracao">
         <h2>Juntos, já conquistamos:</h2>
-        <div class="cards-index">
+        <div class="grid">
           <div class="card">
-            <img src="img/muda-icon.svg" alt="" />
+            <div class="badge badge-primario">Meio Ambiente</div>
+            <img src="img/muda-icon.svg" alt="Ícone de árvore" />
             <h3>+ 5.000</h3>
             <p>Árvores plantadas</p>
           </div>
           <div class="card">
-            <img src="img/dog-icon2.svg" alt="" />
+            <div class="badge badge-secundario">Proteção Animal</div>
+            <img src="img/dog-icon2.svg" alt="Ícone de cachorro" />
             <h3>+ 300</h3>
             <p>Animais resgatados</p>
           </div>
           <div class="card">
-            <img src="img/comunidade-icon.svg" alt="" />
+            <div class="badge badge-info">Impacto Social</div>
+            <img src="img/comunidade-icon.svg" alt="Ícone de comunidade" />
             <h3>20</h3>
             <p>Comunidades apoiadas</p>
           </div>
           <div class="card">
-            <img src="img/voluntario-icon.svg" alt="" />
+            <div class="badge badge-alerta">Voluntariado</div>
+            <img src="img/voluntario-icon.svg" alt="Ícone de voluntário" />
             <h3>+ 800</h3>
             <p>Voluntários ativos</p>
           </div>
         </div>
       </section>
-    </section>
+    </div>
   </main>
   <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-social">
-          <a href="https://facebook.com/sua-ong" target="_blank" aria-label="Link para o Facebook">
-            <img src="img/facebook-32px.svg" alt="Facebook">
-          </a>
-          <a href="https://instagram.com/sua-ong" target="_blank" aria-label="Link para o Instagram">
-            <img src="img/instagram-32px.svg" alt="Instagram">
-          </a>
-          <a href="https://linkedin.com/company/sua-ong" target="_blank" aria-label="Link para o LinkedIn">
-            <img src="img/linkedin-32px.svg" alt="LinkedIn">
-          </a>
-        </div>
+    <div class="footer-content">
+      <div class="footer-social">
+        <a href="https://facebook.com/sua-ong" target="_blank" aria-label="Link para o Facebook">
+          <img src="img/facebook-32px.svg" alt="Facebook">
+        </a>
+        <a href="https://instagram.com/sua-ong" target="_blank" aria-label="Link para o Instagram">
+          <img src="img/instagram-32px.svg" alt="Instagram">
+        </a>
+        <a href="https://linkedin.com/company/sua-ong" target="_blank" aria-label="Link para o LinkedIn">
+          <img src="img/linkedin-32px.svg" alt="LinkedIn">
+        </a>
       </div>
 
       <div class="footer-center">
@@ -117,7 +155,6 @@
       <div class="footer-right">
         <p>&copy; 2025 Muda Mundo - Todos os direitos reservados</p>
       </div>
-    </div>
     </div>
   </footer>
 </body>

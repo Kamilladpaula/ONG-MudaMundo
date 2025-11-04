@@ -1,0 +1,1732 @@
+/* === SEÇÃO DE ENTRADA === */
+.secao-entrada {
+  position: relative;
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.banner-principal {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.banner-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  max-width: 90%;
+  z-index: 2;
+}
+
+.banner-container h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--branco);
+}
+
+.banner-container h2 {
+  margin-top: 0.5rem;
+  color: var(--branco);
+}
+
+.banner-container p1,
+.banner-container p2 {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.btn-faca-parte {
+  display: inline-block;
+  background-color: var(--laranja);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn-faca-parte:hover {
+  background-color: var(--laranja-hover);
+}
+
+/* === SEÇÕES === */
+.secao-white,
+.secao-orange,
+.secao-sobre,
+.secao-projetos {
+  background-color: var(--branco);
+  padding: 2rem 0;
+}
+
+
+/* === RESUMO === */
+.resumo {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: left;
+}
+
+.resumo ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.resumo li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+}
+
+.resumo strong {
+  display: block;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+}
+
+/* === INSPIRAÇÃO / CARDS === */
+.inspiracao {
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+}
+
+.card {
+  background-color: var(--branco);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  padding: 1.5rem;
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img,
+.card-info img {
+  height: 80px;
+  margin: auto
+}
+
+.card h3 {
+  color: var(--laranja);
+  margin-bottom: 0.5rem;
+}
+
+.card-info h3 {
+  color: var(--azul);
+  margin-bottom: 0.5rem;
+}
+
+/* ======================== */
+/* === PÁGINA SOBRE NÓS === */
+/* ======================== */
+.secao-sobre h1 {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.secao-sobre h3 {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.secao-sobre p {
+  text-align: justify;
+}
+
+.secao-sobre ul {
+  text-align: left;
+  padding-bottom: 1rem;
+}
+
+.secao-sobre ul p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.secao-sobre p.assinatura {
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+
+}
+
+.secao-white .grid {
+  justify-content: space-between;
+  /* Distribui os cards para preencher o espaço */
+  flex-wrap: wrap;
+  /* Permite que os cards quebrem a linha em telas menores */
+  gap: var(--space-4);
+  /* Adiciona um espaçamento consistente entre os cards */
+  align-items: stretch;
+  /* Garante que todos os cards na mesma linha tenham a mesma altura */
+}
+
+.card-info {
+  background-color: var(--branco);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card-info:hover {
+  background: #dddddd94;
+  color: var(--dark);
+  transform: scale(110%);
+}
+
+.card-info h3 {
+  text-align: center;
+}
+
+/* === TIMELINE === */
+.timeline {
+  max-width: var(--largura-max);
+  padding: var(--space-4);
+}
+
+.timeline p {
+  text-align: justify;
+}
+
+.timeline-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  /* Garante responsividade */
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.timeline-item {
+  background-color: #028d6a83;
+  color: var(--branco);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 150px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.timeline-item:hover {
+  opacity: 0.9;
+}
+
+.timeline-item.active {
+  background-color: #f77103;
+}
+
+.timeline-item h3 {
+  margin: 0;
+}
+
+.timeline-item p {
+  display: none;
+}
+
+.timeline-content-box {
+  flex: 1;
+  background-color: #e6e4e37a;
+  border-radius: 8px;
+  padding: 2rem;
+  min-height: 265px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#timeline-content {
+  font-size: 1.25rem;
+  color: black;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+/* === EQUIPE === */
+#equipe {
+  max-width: var(--largura-max);
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+.secao-white h2 {
+  text-align: center;
+}
+
+.membro-card {
+  background-color: var(--branco);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+/*
+.membro-card {
+  flex: 0 0 300px;
+  /* largura fixa, sem crescimento automático *
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  border: 2px solid #e6e6e6;
+  border-radius: 16px;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}*/
+
+.membro-card:hover {
+  border-color: var(--bs-teal);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.membro-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  transition: .5s;
+}
+
+/* ======================== */
+/* === PÁGINA PROJETOS ==== */
+/* ======================== */
+.secao-projetos,
+.projetos-destaque,
+.chamada-acao {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0rem 1rem;
+  text-align: justify;
+}
+
+.secao-projetos h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.secao-projetos .subtitulo {
+  font-size: 1.125rem;
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+  color: #444;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.filtros {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.filtros label {
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+
+.filtros select {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 1rem;
+  min-width: 160px;
+}
+
+.btn-filtro {
+  background-color: #5e0a80;
+  /* roxo */
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-filtro:hover {
+  background-color: #7d26a5;
+}
+
+
+/* === SEÇÃO PROJETOS DESTAQUE === */
+.projetos-destaque {
+  padding: 2rem 2rem;
+}
+
+.titulo-secao {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+/* === Layout do projeto === */
+.projeto-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.layout-reverso {
+  flex-direction: row-reverse;
+}
+
+.projeto-img img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.projeto-texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.projeto-texto h2 {
+  color: #205c40;
+  margin-bottom: 1rem;
+}
+
+.projeto-texto p {
+  color: #444;
+}
+
+/* === botão saiba mais === */
+.btn-projeto {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.btn-projeto.cor-turquesa {
+  background-color: #009688;
+}
+
+.btn-projeto.cor-turquesa:hover {
+  background-color: #00796b;
+}
+
+.btn-projeto.cor-roxa {
+  background-color: #6a1b9a;
+}
+
+.btn-projeto.cor-roxa:hover {
+  background-color: #4a148c;
+}
+
+
+/* ==== SEÇÃO CHAMADA AÇÃO === */
+.chamada-acao h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.chamada-acao .subtitulo {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* === Cards lado a lado === */
+.acao-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.acao-box {
+  background-color: white;
+  color: #333;
+  border-radius: 16px;
+  padding: 2rem;
+  flex: 1 1 300px;
+  max-width: 400px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+
+}
+
+.acao-box:hover {
+  transform: translateY(-5px);
+}
+
+.acao-box h3 {
+  margin-bottom: 1rem;
+  color: #d35400;
+}
+
+.acao-box p {
+  text-align: justify;
+}
+
+/* === estilo dos botões === */
+.btn-ir-pagina {
+  background-color: #388e3c;
+  /* Verde */
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: background 0.3s;
+
+}
+
+.btn-ir-pagina:hover {
+  background-color: #2e7d32;
+}
+
+.btn-doar {
+  background-color: #f57c00;
+  /* Laranja */
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.btn-doar:hover {
+  background-color: #ef6c00;
+}
+
+/* =========================== */
+/* === PÁGINA VOLUNTARIADO === */
+/* =========================== */
+
+.banner-voluntario,
+.oportunidades,
+.como-participar {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0rem 1rem;
+  text-align: justify;
+}
+
+.banner-voluntario h1 {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.banner-voluntario p {
+  padding-bottom: 2rem;
+}
+
+.oportunidades {
+  background-color: #fffffefa;
+  border-radius: 16px;
+  box-shadow: 0 0.5px 10px rgba(0, 0, 0, 0.562);
+  padding-bottom: 2rem;
+}
+
+.oportunidades h2 {
+  text-align: center;
+  color: #202020;
+  padding: 2rem 2rem;
+}
+
+.cards-oportunidades {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cards-oportunidades .card-info {
+  background-color: white;
+  color: #333;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cards-oportunidades .card-info h3 {
+  margin-bottom: 1.5rem;
+}
+
+.cards-oportunidades .card-info img {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.acao-box p {
+  text-align: justify;
+}
+
+/* === SEÇÃO COMO PARTICIPAR === */
+.como-participar {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.como-participar h2 {
+  margin-bottom: 3rem;
+  color: #2e7d32;
+}
+
+.passos {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+  position: relative;
+  text-align: left;
+}
+
+/* Linha da timeline */
+.passos::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  width: 4px;
+  background-color: #2e7d323a;
+  border-radius: 2px;
+}
+
+.passos li {
+  margin-bottom: 2.5rem;
+  padding-left: 50px;
+  position: relative;
+}
+
+/* Círculo com o número do passo */
+.passos li::before {
+  content: counter(passo);
+  counter-increment: passo;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2e7d32;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #f7fdf8;
+}
+
+.passos strong {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.passos p {
+  color: #555;
+}
+
+.btn-cadastro {
+  margin-top: 2rem;
+}
+
+/* ========================== */
+/* ===== PÁGINA DOAÇÕES ===== */
+/* ========================== */
+
+/* === SEÇÃO PRINCIPAL DE DOAÇÃO === */
+.secao-doacao {
+  padding: 3rem 1rem;
+}
+
+.secao-doacao h1 {
+  text-align: center;
+}
+
+.secao-doacao p {
+  text-align: justify;
+}
+
+.secao-doacao .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-items: center;
+}
+
+/* === SEÇÃO CAMPANHA ATIVA === */
+
+.campanha-ativa h2 {
+  margin-bottom: 2rem;
+  color: var(--laranja);
+}
+
+/* Card principal */
+.campanha-card {
+  background-color: var(--branco);
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.campanha-card h3 {
+  color: #5e0a80;
+  margin-bottom: 1rem;
+}
+
+.campanha-descricao {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Área de meta */
+.meta-arrecadacao {
+  margin-bottom: 1.5rem;
+}
+
+.progresso-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.progresso-info strong {
+  color: #2e7d32;
+  /* Verde escuro */
+}
+
+.SOS {
+  display: inline-block;
+  block-size: 1em;
+  inline-size: 40em;
+  vertical-align: -0.2em;
+  align-items: center;
+}
+
+/* Botão de ação */
+.btn-principal {
+  display: inline-block;
+  background-color: var(--laranja);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-principal:hover {
+  background-color: #cf711f;
+}
+
+
+/* === SEÇÃO OUTRAS FORMAS DE DOAR === */
+.formas-doar,
+.secao-form-doacao {
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding-top: 4rem;
+  text-align: justify;
+  padding-bottom: 3rem;
+}
+
+.formas-doar h2 {
+  text-align: left;
+  padding-top: rem;
+}
+
+.formas-doar .card-info p {
+  text-align: center;
+}
+
+/* === SEÇÃO FORMULÁRIO DE DOAÇÃO === */
+
+
+.secao-form-doacao {
+  background-color: #f7fdf8;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.secao-form-doacao h2 {
+  margin-bottom: 2.5rem;
+  color: #2e7d32;
+}
+
+.form-doacao {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* === OPÇÕES EM LINHA === */
+.valor-options,
+.frequencia-options,
+.pagamento-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.valor-options label,
+.frequencia-options label,
+.pagamento-options label {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+  font-weight: 500;
+}
+
+.valor-options label:hover,
+.frequencia-options label:hover,
+.pagamento-options label:hover {
+  border-color: #2e7d32
+}
+
+.valor-options input[type="number"] {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Oculta o input original e estiliza o span */
+.valor-options input[type="radio"],
+.frequencia-options input[type="radio"],
+.pagamento-options input[type="radio"] {
+  display: none;
+}
+
+.valor-options input[type="radio"]:checked+span,
+.frequencia-options input[type="radio"]:checked+span,
+.pagamento-options input[type="radio"]:checked+span {
+  color: rgb(17, 17, 17);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+
+/* === DADOS PESSOAIS === */
+
+
+.dados-pessoais {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.form-group input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* === DETALHES DO PAGAMENTO (CHECKOUT) === */
+.detalhes-pagamento-container {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.metodo-detalhes.hidden {
+  display: none;
+}
+
+/* Estilo PIX */
+#detalhes-pix {
+  text-align: center;
+}
+
+#detalhes-pix p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.pix-qrcode {
+  max-width: 200px;
+  margin: 0 auto 1rem;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.btn-copia-cola {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-copia-cola:hover {
+  background-color: #e0e0e0;
+}
+
+/* === BOTÃO === */
+.form-doacao .btn-principal {
+  width: 100%;
+}
+
+.campanha-ativa .btn-principal {
+  display: inline-block;
+  background-color: var(--laranja);
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.9rem 0;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.btn-principal:hover {
+  background-color: #cf711f;
+}
+
+/* ================================ */
+/* ===== PÁGINA TRANSPARÊNCIA ===== */
+/* ================================ */
+
+
+/* === SEÇÃO: Compromisso com a Confiança === */
+.secao-confianca,
+.secao-relatorios,
+.secao-uso-recursos,
+.secao-prest-projetos {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: justify;
+  padding-bottom: 3rem;
+}
+
+.secao-confianca h1 {
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.secao-confianca .subtitulo {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #555;
+  line-height: 1.6;
+}
+
+.filtro-relatorios .form-grid-filtros {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-3);
+}
+
+/* === SEÇÃO: Relatórios Financeiros === */
+
+.secao-relatorios h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.lista-relatorios {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.lista-relatorios li {
+  margin-bottom: 1rem;
+}
+
+.lista-relatorios a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  background-color: #f4f4f4;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.lista-relatorios a:hover {
+  background-color: #e1e1e1;
+}
+
+/* === SEÇÃO: Uso de Recursos === */
+.secao-uso-recursos {
+  background-color: #fffffefa;
+  border-radius: 16px;
+  box-shadow: 0 0.5px 10px rgba(0, 0, 0, 0.562);
+  padding-top: 2rem;
+}
+
+.secao-uso-recursos h2 {
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.grafico-container {
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.grafico-containers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+#graficoUsoRecursos {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+.legenda-grafico {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* centraliza verticalmente */
+  gap: 12px;
+  font-size: 1rem;
+}
+
+.legenda-grafico {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #333;
+}
+
+.legenda-grafico li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Cores das legendas (ajuste conforme necessidade) */
+.legenda-grafico span {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.cor-educacao {
+  background-color: #2ecc71;
+}
+
+.cor-protecao {
+  background-color: #3498db;
+}
+
+.cor-comunidade {
+  background-color: #9b59b6;
+}
+
+.cor-administrativo {
+  background-color: #f39c12;
+}
+
+.cor-recursos {
+  background-color: #e74c3c;
+}
+
+/* === SEÇÃO: Prestação de Contas === */
+
+.secao-prest-projetos h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.secao-prest-projetos .subtitulo {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.cards-projetos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card-projeto {
+  background-color: #fdfdfd;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.card-projeto:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-projeto h3 {
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.card-projeto p {
+  margin: 0.4rem 0;
+  color: #333;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status-andamento {
+  color: #2980b9;
+}
+
+.status-concluido {
+  color: #27ae60;
+}
+
+
+/* ======================= */
+/* ===== PÁGINA BLOG ===== */
+/* ======================= */
+
+.secao-universo,
+.secao-blog {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  text-align: justify;
+}
+
+.secao-universo h1 {
+  margin-bottom: 1rem;
+  color: var(--azul);
+  text-align: center;
+}
+
+.secao-universo .subtitulo {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* === FILTROS DE CATEGORIAS === */
+.filtros-categorias {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filtros-categorias ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filtros-categorias li a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: #eaeaea;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.filtros-categorias li a:hover,
+.filtros-categorias li a.ativo {
+  background-color: var(--azul);
+  color: white;
+}
+
+/* === POSTS EM GRID === */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* === POST CARD === */
+.post-card {
+  background-color: var(--branco);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.post-categoria {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--azul);
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.post-card h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.post-meta {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 0.75rem;
+}
+
+.post-resumo {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* === PAGINAÇÃO === */
+.paginacao {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 3rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.paginacao a {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.paginacao a:hover,
+.paginacao a.active {
+  background-color: var(--azul);
+  color: #fff;
+  border-color: var(--azul);
+}
+
+/* ========================= */
+/* === PÁGINA DE CONTATO === */
+/* ========================= */
+.secao-contato {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+.secao-contato h1 {
+  margin-bottom: 1rem;
+  color: #2e7d32;
+}
+
+.secao-contato .subtitulo {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* === GRID DE CONTATO === */
+.contato-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3rem;
+  max-width: 900px;
+  margin: 3rem auto 0;
+}
+
+/* === INFORMAÇÕES DE CONTATO === */
+.contato-info {
+  flex: 1;
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.contato-info h2 {
+  margin-bottom: 1.5rem;
+  color: #2e7d32;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-item img {
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+}
+
+.info-item strong {
+  font-weight: 600;
+  color: #333;
+}
+
+.info-item p,
+.info-item a {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* === FORMULÁRIO DE CONTATO === */
+.contato-form {
+  flex: 1;
+  background-color: var(--branco);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.contato-form h2 {
+  margin-bottom: 1.5rem;
+  color: #2e7d32;
+}
+
+.form-contato label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  border-color: #2e7d32;
+  outline: none;
+}
+
+.form-contato textarea {
+  resize: vertical;
+}
+
+/* === BOTÃO ENVIAR === */
+.form-contato .btn-principal {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #2e7d32;
+  color: white;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-contato .btn-principal:hover {
+  background-color: #27692c;
+}
+
+/* === MAPA === */
+.mapa-localizacao {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.mapa-localizacao h2 {
+  margin-bottom: 2rem;
+  color: #2e7d32;
+}
+
+.mapa-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.mapa-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ========================== */
+/* === PÁGINA DE CADASTRO === */
+/* ========================== */
+
+.secao-formulario {
+  text-align: center;
+}
+
+.secao-formulario h2 {
+  margin-bottom: 1rem;
+  color: #2e7d32;
+  text-align: center;
+}
+
+.secao-formulario .subtitulo {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* === WRAPPER DO FORMULÁRIO === */
+.form-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #0edd2913;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+/* === FORMULÁRIO GERAL === */
+.form-cadastro fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem 1.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.form-cadastro legend {
+  padding: 0 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #2e7d32;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2e7d32;
+  outline: none;
+}
+
+/* === GRIDS === */
+.form-grid-2,
+.form-grid-3 {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-grid-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-grid-3 {
+  grid-template-columns: 1fr 2fr;
+}
+
+.grid-span-2 {
+  grid-column: span 2;
+}
+
+/* === BOTÃO FINALIZAR === */
+.btn-principal {
+  background-color: #2e7d32;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-principal:hover {
+  background-color: #27692c;
+}
+
+/* ======================= */
+/* === PÁGINA DE LOGIN === */
+/* ======================= */
+
+.login-secao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  min-height: 80vh;
+  background-color: #f9f9f9;
+}
+
+.login-wrapper {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-wrapper h2 {
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo-login {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.form-login .form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-login label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-login input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-login input:focus {
+  border-color: #2e7d32;
+  outline: none;
+}
+
+.link-esqueci-senha {
+  display: block;
+  text-align: right;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  color: #2e7d32;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link-esqueci-senha:hover {
+  color: #1b5e20;
+  text-decoration: underline;
+}
+
+.btn-principal {
+  display: inline-block;
+  background-color: var(--laranja);
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn-principal:hover {
+  background-color: #cf711f;
+}
+
+.login-rodape {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+.login-rodape a {
+  color: #2e7d32;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-rodape a:hover {
+  text-decoration: underline;
+}

@@ -8,8 +8,10 @@
   <title>Muda Mundo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Gudea:ital,wght@0,400;0,700;1,400&family=Signika:wght@300..700&display=swap" rel="stylesheet" />
   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -20,9 +22,20 @@
           <img src="../img/Logo-64px.svg" alt="Voltar para a página inicial" />
         </a>
         <ul class="nav-menu">
-          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li>
+            <a href="sobre.html" class="tem-submenu">Sobre Nós</a>
+            <ul class="submenu">
+              <li><a href="sobre.html#historia">Nossa História</a></li>
+              <li><a href="sobre.html#equipe">Nossa Equipe</a></li>
+            </ul>
+          </li>
           <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="voluntariado.html">Voluntariado</a></li>
+          <li>
+            <a href="voluntariado.html" class="tem-submenu">Voluntariado</a>
+            <ul class="submenu">
+              <li><a href="cadastro.html">Cadastre-se</a></li>
+            </ul>
+          </li>
           <li><a href="doacoes.html">Doações</a></li>
           <li><a href="transparencia.html">Transparência</a></li>
           <li><a href="blog.html">Blog</a></li>
@@ -39,54 +52,50 @@
     </nav>
   </header>
   <main>
-    <section class="secao-banner-green">
+    <div class="container">
       <section class="login-secao">
-        <div class="container">
-          <div class="login-wrapper">
-            <h2>Acesse sua Conta</h2>
-            <p class="subtitulo-login">Bem-vindo de volta! Faça o login para continuar.</p>
+        <div class="login-wrapper">
+          <h2>Acesse sua Conta</h2>
+          <p class="subtitulo-login">Bem-vindo de volta! Faça o login para continuar.</p>
 
-            <form action="#" method="POST" class="form-login">
-              <div class="form-group">
-                <label for="email-login">E-mail</label>
-                <input type="email" id="email-login" name="email-login" required placeholder="seu.email@exemplo.com">
-              </div>
-              <div class="form-group">
-                <label for="senha-login">Senha</label>
-                <input type="password" id="senha-login" name="senha-login" required placeholder="Sua senha">
-              </div>
-
-              <a href="recuperar-senha.html" class="link-esqueci-senha">Esqueceu sua senha?</a>
-
-              <button type="submit" class="btn-principal">Entrar</button>
-            </form>
-
-            <div class="login-rodape">
-              <p>Ainda não é voluntário? <a href="cadastro.html">Cadastre-se aqui</a></p>
+          <form class="form-login" autocomplete="off" novalidate>
+            <div class="form-group">
+              <label for="email-login">E-mail</label>
+              <input type="email" id="email-login" name="email-login" required placeholder="seu.email@exemplo.com">
             </div>
+            <div class="form-group">
+              <label for="senha-login">Senha</label>
+              <input type="password" id="senha-login" name="senha-login" required placeholder="Sua senha" autocomplete="current-password">
+            </div>
+
+            <a href="recuperar-senha.html" class="link-esqueci-senha">Esqueceu sua senha?</a>
+
+            <button type="submit" class="btn btn-principal">Entrar</button>
+          </form>
+
+          <div class="login-rodape">
+            <p>Ainda não é voluntário? <a href="cadastro.html">Cadastre-se aqui</a></p>
           </div>
         </div>
       </section>
-    </section>
+    </div>
   </main>
   <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-social">
-          <a href="https://facebook.com/sua-ong" target="_blank" aria-label="Link para o Facebook">
-            <img src="../img/facebook-32px.svg" alt="Facebook">
-          </a>
-          <a href="https://instagram.com/sua-ong" target="_blank" aria-label="Link para o Instagram">
-            <img src="../img/instagram-32px.svg" alt="Instagram">
-          </a>
-          <a href="https://linkedin.com/company/sua-ong" target="_blank" aria-label="Link para o LinkedIn">
-            <img src="../img/linkedin-32px.svg" alt="LinkedIn">
-          </a>
-        </div>
+    <div class="footer-content">
+      <div class="footer-social">
+        <a href="https://facebook.com/sua-ong" target="_blank" aria-label="Link para o Facebook">
+          <img src="../img/facebook-32px.svg" alt="Facebook">
+        </a>
+        <a href="https://instagram.com/sua-ong" target="_blank" aria-label="Link para o Instagram">
+          <img src="../img/instagram-32px.svg" alt="Instagram">
+        </a>
+        <a href="https://linkedin.com/company/sua-ong" target="_blank" aria-label="Link para o LinkedIn">
+          <img src="../img/linkedin-32px.svg" alt="LinkedIn">
+        </a>
       </div>
 
       <div class="footer-center">
-        <a href="index.html" class="footer-logo">
+        <a href="../index.html" class="footer-logo">
           <img src="../img/Logo-nome-120px.svg" alt="Logo Muda Mundo">
         </a>
       </div>

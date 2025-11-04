@@ -8,8 +8,10 @@
   <title>Muda Mundo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Gudea:ital,wght@0,400;0,700;1,400&family=Signika:wght@300..700&display=swap" rel="stylesheet" />
   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -20,9 +22,20 @@
           <img src="../img/Logo-64px.svg" alt="Voltar para a página inicial" />
         </a>
         <ul class="nav-menu">
-          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li>
+            <a href="sobre.html" class="tem-submenu">Sobre Nós</a>
+            <ul class="submenu">
+              <li><a href="sobre.html#historia">Nossa História</a></li>
+              <li><a href="sobre.html#equipe">Nossa Equipe</a></li>
+            </ul>
+          </li>
           <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="voluntariado.html">Voluntariado</a></li>
+          <li>
+            <a href="voluntariado.html" class="tem-submenu">Voluntariado</a>
+            <ul class="submenu">
+              <li><a href="cadastro.html">Cadastre-se</a></li>
+            </ul>
+          </li>
           <li><a href="doacoes.html">Doações</a></li>
           <li><a href="transparencia.html">Transparência</a></li>
           <li><a href="blog.html">Blog</a></li>
@@ -39,8 +52,8 @@
     </nav>
   </header>
   <main>
-    <section class="secao-banner-green">
-      <section class="banner-projetos">
+    <div class="container">
+      <section class="secao-projetos">
         <h2>Projetos que transformam</h2>
         <p class="subtitulo">Acreditamos que a mudança real acontece em várias frentes, conectadas por um único
           propósito. Conheça nossas principais frentes de atuação e o impacto que estamos criando juntos.</p>
@@ -67,11 +80,9 @@
           <button id="ir-para-projeto" class="btn-filtro" disabled>Ver Projeto</button>
         </div>
       </section>
-    </section>
-    <section class="secao-white">
       <section class="projetos-destaque">
         <h1 class="titulo-secao">Nossos projetos</h1>
-        <article class="projeto-item">
+        <article class="projeto-item" id="projeto-reflorestamento" data-categoria="educacao" data-status="ativo">
           <div class="projeto-img">
             <img src="../img/reflorestamento-1080x720.svg" alt="Imagem do projeto de reflorestamento">
           </div>
@@ -83,7 +94,7 @@
           </div>
         </article>
 
-        <article class="projeto-item layout-reverso">
+        <article class="projeto-item layout-reverso" id="projeto-eduambiental" data-categoria="educacao" data-status="concluido">
           <div class="projeto-img">
             <img src="../img/eduambiental-1080x720.svg" alt="Imagem do projeto de educação ambiental">
           </div>
@@ -95,7 +106,7 @@
           </div>
         </article>
 
-        <article class="projeto-item">
+        <article class="projeto-item" id="projeto-vida-selvagem" data-categoria="protecao-vida" data-status="ativo">
           <div class="projeto-img">
             <img src="../img/vidaselvagem-1080x720.svg" alt="Imagem do projeto vida selvagem">
           </div>
@@ -106,7 +117,7 @@
           </div>
         </article>
 
-        <article class="projeto-item layout-reverso">
+        <article class="projeto-item layout-reverso" id="projeto-resgates" data-categoria="Resgates" data-status="ativo">
           <div class="projeto-img">
             <img src="../img/animais_enchentes-1080x810.svg" alt="Imagem do projeto de Resgates">
           </div>
@@ -117,46 +128,40 @@
           </div>
         </article>
       </section>
-    </section>
-    <section class="secao-orange">
       <section class="chamada-acao">
-        <div class="container">
-          <h2>Faça parte da mudança</h2>
-          <p class="subtitulo">Sua ajuda, seja com tempo ou recursos, é a energia que move nosso trabalho</p>
-          <div class="acao-container">
-            <div class="acao-box">
-              <h3>Seja um Voluntário</h3>
-              <p>Doe seu tempo e talento para criar um impacto real no mundo. Sua energia trasnforma.</p>
-              <a href="voluntariado.html" class="btn-ir-pagina">Quero ser voluntário</a>
-            </div>
-            <div class="acao-box">
-              <h3>Faça uma Doação</h3>
-              <p>Cada contribuição financeira nos ajuda a ampliar nosso alcance e fortalecer nossos projetos.</p>
-              <a href="doacoes.html" class="btn-doar">Quero doar</a>
-            </div>
+        <h2>Faça parte da mudança</h2>
+        <p class="subtitulo">Sua ajuda, seja com tempo ou recursos, é a energia que move nosso trabalho</p>
+        <div class="acao-container">
+          <div class="acao-box">
+            <h3>Seja um Voluntário</h3>
+            <p>Doe seu tempo e talento para criar um impacto real no mundo. Sua energia trasnforma.</p>
+            <a href="cadastro.html" class="btn-ir-pagina">Quero ser voluntário</a>
+          </div>
+          <div class="acao-box">
+            <h3>Faça uma Doação</h3>
+            <p>Cada contribuição financeira nos ajuda a ampliar nosso alcance e fortalecer nossos projetos.</p>
+            <a href="doacoes.html" class="btn-doar">Quero doar</a>
           </div>
         </div>
       </section>
-    </section>
+    </div>
   </main>
   <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-social">
-          <a href="https://facebook.com/sua-ong" target="_blank" aria-label="Link para o Facebook">
-            <img src="../img/facebook-32px.svg" alt="Facebook">
-          </a>
-          <a href="https://instagram.com/sua-ong" target="_blank" aria-label="Link para o Instagram">
-            <img src="../img/instagram-32px.svg" alt="Instagram">
-          </a>
-          <a href="https://linkedin.com/company/sua-ong" target="_blank" aria-label="Link para o LinkedIn">
-            <img src="../img/linkedin-32px.svg" alt="LinkedIn">
-          </a>
-        </div>
+    <div class="footer-content">
+      <div class="footer-social">
+        <a href="https://facebook.com/sua-ong" target="_blank" aria-label="Link para o Facebook">
+          <img src="../img/facebook-32px.svg" alt="Facebook">
+        </a>
+        <a href="https://instagram.com/sua-ong" target="_blank" aria-label="Link para o Instagram">
+          <img src="../img/instagram-32px.svg" alt="Instagram">
+        </a>
+        <a href="https://linkedin.com/company/sua-ong" target="_blank" aria-label="Link para o LinkedIn">
+          <img src="../img/linkedin-32px.svg" alt="LinkedIn">
+        </a>
       </div>
 
       <div class="footer-center">
-        <a href="index.html" class="footer-logo">
+        <a href="../index.html" class="footer-logo">
           <img src="../img/Logo-nome-120px.svg" alt="Logo Muda Mundo">
         </a>
       </div>

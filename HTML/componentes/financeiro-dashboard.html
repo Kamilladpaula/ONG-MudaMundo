@@ -1,30 +1,90 @@
 <div class="main-header">
-    <h1>Dashboard Geral</h1>
-    <p>Visão geral e estratégica da organização.</p>
+  <h1>Dashboard Financeiro</h1>
+  <p>Análise e acompanhamento dos indicadores financeiros da organização.</p>
 </div>
 
-<div class="dashboard-grid">
-    <div class="stat-card">
-        <h3>Fluxo de Caixa</h3>
-        <p class="stat-numero">12</p>
-    </div>
-    <div class="stat-card">
-        <h3>Contas a Pagar</h3>
-        <p class="stat-numero">845</p>
-    </div>
-    <div class="stat-card">
-        <h3>Arrecadação (Mês)</h3>
-        <p class="stat-numero">R$ 15.780,00</p>
-    </div>
-    <div class="stat-card">
-        <h3>Meta</h3>
-        <p class="stat-numero">32</p>
-    </div>
+<div class="dashboard-geral">
+  <div class="stat-card">
+    <h3>Fluxo de Caixa</h3>
+    <p class="stat-numero">R$ 45.780,00</p>
+    <small>Saldo atual em conta</small>
+  </div>
+  <div class="stat-card">
+    <h3>Contas a Pagar</h3>
+    <p class="stat-numero">R$ 12.450,00</p>
+    <small>Próximos 30 dias</small>
+  </div>
+  <div class="stat-card">
+    <h3>Arrecadação (Mês)</h3>
+    <p class="stat-numero">R$ 15.780,00</p>
+    <small>vs. R$ 14.500,00 mês anterior</small>
+  </div>
+  <div class="stat-card">
+    <h3>Meta Mensal</h3>
+    <p class="stat-numero">78%</p>
+    <small>R$ 15.780,00 de R$ 20.000,00</small>
+  </div>
 </div>
 
-<div class="grafico-container" style="margin-top: 40px;">
-    <h2>Gráfico de Impacto Anual</h2>
-    <div class="grafico-wrapper">
-        <img src="img/grafico-exemplo.png" alt="Gráfico de barras mostrando o crescimento de doações">
-    </div>
+<div class="grafico-container">
+  <h2>Evolução Financeira</h2>
+  <div class="grafico-controles">
+    <select id="filtro-mes">
+      <option value="todos">Todos os Meses</option>
+      <option value="0">Janeiro</option>
+      <option value="1">Fevereiro</option>
+      <option value="2">Março</option>
+      <option value="3">Abril</option>
+      <option value="4">Maio</option>
+      <option value="5">Junho</option>
+      <option value="6">Julho</option>
+      <option value="7">Agosto</option>
+      <option value="8">Setembro</option>
+      <option value="9">Outubro</option>
+      <option value="10">Novembro</option>
+      <option value="11">Dezembro</option>
+    </select>
+    <button id="btn-exportar-csv" class="btn-secundario">Exportar CSV</button>
+  </div>
+  <div class="grafico-wrapper">
+    <canvas id="graficoImpacto"></canvas>
+  </div>
+</div>
+
+<div class="tabela-container" style="margin-top: 40px;">
+  <h2>Últimas Movimentações</h2>
+  <table class="tabela-dados-movimentacao">
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Descrição</th>
+        <th>Categoria</th>
+        <th>Tipo</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>25/10/2025</td>
+        <td>Doação Mensal - Programa Amigos da Natureza</td>
+        <td>Doações Recorrentes</td>
+        <td><span class="status status-aprovado">Entrada</span></td>
+        <td>R$ 5.000,00</td>
+      </tr>
+      <tr>
+        <td>23/10/2025</td>
+        <td>Compra de Mudas - Projeto Reflorestamento</td>
+        <td>Material de Campo</td>
+        <td><span class="status status-recusado">Saída</span></td>
+        <td>R$ 2.800,00</td>
+      </tr>
+      <tr>
+        <td>20/10/2025</td>
+        <td>Pagamento Equipe - Outubro</td>
+        <td>Recursos Humanos</td>
+        <td><span class="status status-recusado">Saída</span></td>
+        <td>R$ 12.000,00</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

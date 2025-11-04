@@ -8,8 +8,10 @@
   <title>Muda Mundo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Gudea:ital,wght@0,400;0,700;1,400&family=Signika:wght@300..700&display=swap" rel="stylesheet" />
   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -20,9 +22,20 @@
           <img src="../img/Logo-64px.svg" alt="Voltar para a página inicial" />
         </a>
         <ul class="nav-menu">
-          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li>
+            <a href="sobre.html" class="tem-submenu">Sobre Nós</a>
+            <ul class="submenu">
+              <li><a href="sobre.html#historia">Nossa História</a></li>
+              <li><a href="sobre.html#equipe">Nossa Equipe</a></li>
+            </ul>
+          </li>
           <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="voluntariado.html">Voluntariado</a></li>
+          <li>
+            <a href="voluntariado.html" class="tem-submenu">Voluntariado</a>
+            <ul class="submenu">
+              <li><a href="cadastro.html">Cadastre-se</a></li>
+            </ul>
+          </li>
           <li><a href="doacoes.html">Doações</a></li>
           <li><a href="transparencia.html">Transparência</a></li>
           <li><a href="blog.html">Blog</a></li>
@@ -39,26 +52,24 @@
     </nav>
   </header>
   <main>
-    <section class="secao-banner-green">
-      <div class="container">
+    <div class="container">
+      <section class="secao-universo">
         <h1>Fique por Dentro do Nosso Universo</h1>
         <p class="subtitulo">Explore nossas últimas notícias, mergulhe em histórias inspiradoras e aprenda dicas para um dia a dia mais sustentável. Aqui, cada post é uma janela para a mudança que estamos construindo juntos.</p>
-      </div>
-    </section>
-    <section class="secao-white">
-      <div class="container">
+      </section>
+      <section class="secao-blog">
         <nav class="filtros-categorias">
           <ul>
-            <li><a href="#" class="ativo">Todos</a></li>
-            <li><a href="#">Notícias</a></li>
-            <li><a href="#">Campanhas</a></li>
-            <li><a href="#">Histórias de Sucesso</a></li>
-            <li><a href="#">Dicas de Sustentabilidade</a></li>
+            <li><a href="#" class="ativo" data-filtro="todos">Todos</a></li>
+            <li><a href="#" data-filtro="noticias">Notícias</a></li>
+            <li><a href="#" data-filtro="campanhas">Campanhas</a></li>
+            <li><a href="#" data-filtro="historias-de-sucesso">Histórias de Sucesso</a></li>
+            <li><a href="#" data-filtro="dicas-de-sustentabilidade">Dicas de Sustentabilidade</a></li>
           </ul>
         </nav>
 
         <div class="posts-grid">
-          <article class="post-card">
+          <article class="post-card" data-categoria="noticias">
             <a href="#">
               <img src="../img/Mutirao_voluntarios_blog.png" alt="Voluntários plantando árvores em um grande mutirão.">
               <div class="card-content">
@@ -72,7 +83,7 @@
             </a>
           </article>
 
-          <article class="post-card">
+          <article class="post-card" data-categoria="historias-de-sucesso">
             <a href="#">
               <img src="../img/Juba_onça.jpg" alt="Onça pintada caminhando pela mata.">
               <div class="card-content">
@@ -85,7 +96,7 @@
             </a>
           </article>
 
-          <article class="post-card">
+          <article class="post-card" data-categoria="dicas-de-sustentabilidade">
             <a href="#">
               <img src="../img/canudos_metal.webp" alt="Itens sustentáveis como sacola de pano e canudo de metal.">
               <div class="card-content">
@@ -99,7 +110,7 @@
             </a>
           </article>
 
-          <article class="post-card">
+          <article class="post-card" data-categoria="campanhas">
             <a href="#">
               <img src="../img/Cerrado.jpg" alt="Paisagem do cerrado com sinal de alerta.">
               <div class="card-content">
@@ -112,7 +123,7 @@
             </a>
           </article>
 
-          <article class="post-card">
+          <article class="post-card" data-categoria="noticias">
             <a href="#">
               <img src="../img/eduambiental-escolas.png" alt="Crianças em uma oficina de educação ambiental.">
               <div class="card-content">
@@ -126,7 +137,7 @@
             </a>
           </article>
 
-          <article class="post-card">
+          <article class="post-card" data-categoria="dicas-de-sustentabilidade">
             <a href="#">
               <img src="../img/lixeira_reciclagem.png" alt="Símbolos de reciclagem em lixeiras coloridas.">
               <div class="card-content">
@@ -140,7 +151,6 @@
             </a>
           </article>
         </div>
-
         <nav class="paginacao">
           <a href="#" class="prev">Anterior</a>
           <a href="#" class="page active">1</a>
@@ -148,27 +158,57 @@
           <a href="#" class="page">3</a>
           <a href="#" class="next">Próxima</a>
         </nav>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
+
+  <!-- Modal de Newsletter -->
+  <div class="modal" id="modalNewsletter">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Inscreva-se em nossa Newsletter</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Fique por dentro de todas as nossas ações e novidades!</p>
+        <form class="form-newsletter">
+          <div class="form-group">
+            <label for="newsletter-email">Seu email:</label>
+            <input type="email" id="newsletter-email" placeholder="exemplo@email.com" required>
+          </div>
+          <button type="submit" class="btn btn-principal">Inscrever-se</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Exibe o modal após 5 segundos
+    setTimeout(() => {
+      document.getElementById('modalNewsletter').classList.add('show');
+    }, 5000);
+
+    // Fecha o modal ao clicar no X
+    document.querySelector('.modal-close').addEventListener('click', () => {
+      document.getElementById('modalNewsletter').classList.remove('show');
+    });
+  </script>
   <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-social">
-          <a href="https://facebook.com/sua-ong" target="_blank" aria-label="Link para o Facebook">
-            <img src="../img/facebook-32px.svg" alt="Facebook">
-          </a>
-          <a href="https://instagram.com/sua-ong" target="_blank" aria-label="Link para o Instagram">
-            <img src="../img/instagram-32px.svg" alt="Instagram">
-          </a>
-          <a href="https://linkedin.com/company/sua-ong" target="_blank" aria-label="Link para o LinkedIn">
-            <img src="../img/linkedin-32px.svg" alt="LinkedIn">
-          </a>
-        </div>
+    <div class="footer-content">
+      <div class="footer-social">
+        <a href="https://facebook.com/sua-ong" target="_blank" aria-label="Link para o Facebook">
+          <img src="../img/facebook-32px.svg" alt="Facebook">
+        </a>
+        <a href="https://instagram.com/sua-ong" target="_blank" aria-label="Link para o Instagram">
+          <img src="../img/instagram-32px.svg" alt="Instagram">
+        </a>
+        <a href="https://linkedin.com/company/sua-ong" target="_blank" aria-label="Link para o LinkedIn">
+          <img src="../img/linkedin-32px.svg" alt="LinkedIn">
+        </a>
       </div>
 
       <div class="footer-center">
-        <a href="index.html" class="footer-logo">
+        <a href="../index.html" class="footer-logo">
           <img src="../img/Logo-nome-120px.svg" alt="Logo Muda Mundo">
         </a>
       </div>
@@ -179,6 +219,7 @@
     </div>
     </div>
   </footer>
+
 </body>
 
 </html>

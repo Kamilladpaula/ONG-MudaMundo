@@ -1,48 +1,89 @@
 <div class="main-header">
-    <h1>Gerenciar Usuários</h1>
-    <p>Adicione, edite ou remova usuários da plataforma.</p>
+    <h1>Relatórios Gerenciais</h1>
+    <p>Acesse e exporte relatórios consolidados da organização.</p>
 </div>
 
-<table class="tabela-dados">
+<div class="filtro-relatorios" style="padding: 20px; margin-bottom: 30px;">
+    <form action="#" id="form-filtros-relatorios">
+        <div class="form-grid-filtros">
+            <div class="form-group">
+                <label for="tipo-relatorio">Tipo de Relatório</label>
+                <select id="tipo-relatorio" name="tipo-relatorio">
+                    <option value="todos" selected>Todos os Tipos</option>
+                    <option value="financeiro">Financeiro</option>
+                    <option value="projetos">Projetos</option>
+                    <option value="voluntarios">Voluntários</option>
+                    <option value="impacto">Impacto Social</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="periodo-relatorio">Período</label>
+                <select id="periodo-relatorio" name="periodo-relatorio">
+                    <option value="mes-atual">Mês Atual</option>
+                    <option value="mes-anterior">Mês Anterior</option>
+                    <option value="trimestre">Último Trimestre</option>
+                    <option value="ano">Ano Corrente</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</div>
+
+<table class="tabela-dados-relatorio">
     <thead>
         <tr>
             <th>Nome do Relatório</th>
-            <th>Data</th>
+            <th>Data de Geração</th>
             <th>Responsável</th>
+            <th>Status</th>
             <th>Ações</th>
-            <th>Visualizar</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Joana Silva</td>
-            <td>joana.silva@email.com</td>
-            <td>Diretor Geral</td>
-            <td><span class="status status-ativo">Ativo</span></td>
-            <td>
-                <a href="#" class="btn-tabela-editar">Editar</a>
-                <a href="#" class="btn-tabela-remover">Remover</a>
+            <td>Relatório Financeiro - Outubro/2025</td>
+            <td>25/10/2025</td>
+            <td>Maria Santos</td>
+            <td><span class="status status-aprovado">Aprovado</span></td>
+            <td class="tabela-acoes">
+                <a href="#" class="btn-tabela-visualizar">Visualizar</a>
+                <a href="#" class="btn-tabela-download">Download</a>
             </td>
         </tr>
         <tr>
+            <td>Análise de Impacto - Q3 2025</td>
+            <td>15/10/2025</td>
             <td>Carlos Souza</td>
-            <td>carlos.s@email.com</td>
-            <td>Gerente de Projetos</td>
-            <td><span class="status status-ativo">Ativo</span></td>
-            <td>
-                <a href="#" class="btn-tabela-editar">Editar</a>
-                <a href="#" class="btn-tabela-remover">Remover</a>
+            <td><span class="status status-aprovado">Aprovado</span></td>
+            <td class="tabela-acoes">
+                <a href="#" class="btn-tabela-visualizar">Visualizar</a>
+                <a href="#" class="btn-tabela-download">Download</a>
             </td>
         </tr>
         <tr>
-            <td>Mariana Lima</td>
-            <td>mari.lima@email.com</td>
-            <td>Voluntário</td>
-            <td><span class="status status-inativo">Inativo</span></td>
-            <td>
-                <a href="#" class="btn-tabela-editar">Editar</a>
-                <a href="#" class="btn-tabela-remover">Remover</a>
+            <td>Indicadores de Projetos - Setembro/2025</td>
+            <td>05/10/2025</td>
+            <td>Ana Costa</td>
+            <td><span class="status status-pendente">Em Revisão</span></td>
+            <td class="tabela-acoes">
+                <a href="#" class="btn-tabela-visualizar">Visualizar</a>
+                <a href="#" class="btn-tabela-download">Download</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Relatório de Voluntariado - Q3 2025</td>
+            <td>01/10/2025</td>
+            <td>Julia Lima</td>
+            <td><span class="status status-aprovado">Aprovado</span></td>
+            <td class="tabela-acoes">
+                <a href="#" class="btn-tabela-visualizar">Visualizar</a>
+                <a href="#" class="btn-tabela-download">Download</a>
             </td>
         </tr>
     </tbody>
 </table>
+
+<div class="acoes-em-lote" style="margin-top: 20px;">
+    <button class="btn-secundario">Exportar Selecionados</button>
+    <button class="btn-secundario">Gerar Novo Relatório</button>
+</div>
