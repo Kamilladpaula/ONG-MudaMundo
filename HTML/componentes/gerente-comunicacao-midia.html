@@ -4,15 +4,7 @@
 </div>
 
 <div class="midia-actions-bar">
-    <div class="form-group">
-        <label for="acoes-lote">Ações em Lote:</label>
-        <select id="acoes-lote" name="acoes-lote">
-            <option>Aprovar selecionados</option>
-            <option>Recusar selecionados</option>
-        </select>
-        <button class="btn-secundario btn-pequeno">Aplicar</button>
-    </div>
-    <div class="form-group">
+    <div class="form-action">
         <label for="filtro-status-midia">Filtrar por Status:</label>
         <select id="filtro-status-midia" name="filtro-status-midia">
             <option value="pendente" selected>Pendentes</option>
@@ -20,17 +12,24 @@
             <option value="recusado">Recusadas</option>
         </select>
     </div>
+    <div class="form-action">
+        <label for="acoes-lote">Ações em Lote:</label>
+        <select id="acoes-lote" name="acoes-lote">
+            <option>Aprovar selecionados</option>
+            <option>Recusar selecionados</option>
+        </select>
+        <button class="btn-secundario btn-pequeno">Aplicar</button>
+    </div>
 </div>
 
 <div class="midia-grid">
-
-    <div class="card-midia">
+    <div class="card-midia" data-status="pendente">
         <div class="card-midia-checkbox">
             <input type="checkbox" id="midia-1">
             <label for="midia-1"></label>
         </div>
         <div class="card-midia-preview">
-            <img src="img/blog-plantio.jpg" alt="Voluntários plantando árvores.">
+            <img src="../../img/Mutirao_voluntarios_blog.png" alt="Voluntários plantando árvores.">
         </div>
         <div class="card-midia-info">
             <p><strong>Arquivo:</strong> blog-plantio.jpg</p>
@@ -43,16 +42,16 @@
         </div>
     </div>
 
-    <div class="card-midia is-video">
+    <div class="card-midia is-video" data-status="pendente">
         <div class="card-midia-checkbox">
             <input type="checkbox" id="midia-2">
             <label for="midia-2"></label>
         </div>
         <div class="card-midia-preview">
-            <img src="img/blog-onca.jpg" alt="Onça pintada caminhando.">
+            <img src="../../img/Juba_onça.jpg" alt="Onça pintada caminhando.">
         </div>
         <div class="card-midia-info">
-            <p><strong>Arquivo:</strong> video-onca-soltura.mp4</p>
+            <p><strong>Arquivo:</strong> Juba_onça.jpg</p>
             <p><strong>Enviado por:</strong> Equipe de Projetos</p>
             <p><strong>Projeto:</strong> Proteção da Vida Selvagem</p>
         </div>

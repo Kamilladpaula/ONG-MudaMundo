@@ -7,56 +7,79 @@
   <title>Painel de Controle - MudaMundo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/scripts.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Gudea:ital,wght@0,400;0,700;1,400&family=Signika:wght@300..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+  <!-- Chart.js para os gráficos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="../js/scripts.js" defer></script>
+
 </head>
 
 <body class="painel-body">
   <div class="painel-container">
     <aside class="sidebar">
+      <div class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
       <div class="sidebar-header">
-        <img src="img/Logo-64px.svg" alt="Logo Muda Mundo">
+        <img src="../img/Logo-64px.svg" alt="Logo Muda Mundo">
         <span>Muda Mundo</span>
       </div>
+
+      <header class="mains-header">
+        <!-- Conteúdo do header será preenchido pelo panel.js -->
+        <h1>Carregando...</h1>
+        <p><strong>[Perfil do Usuário]</strong></p>
+        <div class="header-notificacoes">
+          <span class="notificacoes-contador">0</span>
+        </div>
+      </header>
+
       <nav class="sidebar-nav">
         <ul>
           <li class="active"><a href="#">📊 Dashboard</a></li>
-          <li><a href="#">📁 Projetos</a></li>
-          <li><a href="#">👥 Voluntários</a></li>
-          <li><a href="#">💰 Doações e Financeiro</a></li>
-          <li><a href="#">📰 Gestão de Conteúdo</a></li>
-          <li><a href="#">📂 Transparência</a></li>
+          <li><a href="#">📊 Dashboard de Projetos</a></li>
+          <li><a href="#">📊 Dashboard Financeiro</a></li>
+          <li><a href="#">📊 Meu Dashboard</a></li>
+          <li><a href="#">📊 Dashboard de Comunicação</a></li>
+          <li><a href="#">🗂️ Detalhes de Projeto</a></li>
+          <li><a href="#">📂 Criar Projeto</a></li>
+          <li><a href="#">✏️ Editar Projeto</a></li>
+          <li><a href="#">💰 Gestão Financeira</a></li>
+          <li><a href="#">🧾 Financeiro</a></li>
+          <li><a href="#">🗃️ Prestação de Contas</a></li>
+          <li><a href="#">🗃️ Prestar Contas</a></li>
+          <li><a href="#">📚 Gestão de Conteúdo</a></li>
+          <li><a href="#">🎨 Supervisão de Mídia</a></li>
+          <li><a href="#">📂 Criar Campanha</a></li>
+          <li><a href="#">📂 Criar Post</a></li>
+          <li><a href="#">👥 Gerenciar Voluntários</a></li>
+          <li><a href="#">🔁 Transação</a></li>
+          <li><a href="#">📑 Relatórios</a></li>
+          <li><a href="#">📑 Relatórios Financeiros</a></li>            
           <li><a href="#">⚙️ Configurações</a></li>
+          <li><a href="#">👥 Gerenciar Usuários</a></li>
+          <li><a href="#">🏠 Minha Área</a></li>
+          <li><a href="#">✨ Oportunidades</a></li>
+          <li><a href="#">📤 Upload de Mídia</a></li></li>
+          <li><a href="#">👤 Usuário</a></li>
         </ul>
       </nav>
       <div class="sidebar-footer">
-        <a href="#">Sair</a>
+        <a href="#">🚪 Sair</a>
       </div>
     </aside>
 
     <main class="conteudo-principal">
-      <header class="main-header">
-        <h1>Bem-vindo<h1>
-            <h3>[Nome do Usuário]!</h3>
-            <p>Seu perfil: <strong>[Perfil do Usuário]</strong></p>
-      </header>
+
 
       <div class="conteudo-wrapper">
-        <div class="dashboard-geral">
-          <div class="stat-card">
-            <h3>Nº de projetos ativos</h3>
-            <p>12</p>
-          </div>
-          <div class="stat-card">
-            <h3>Nº de voluntários</h3>
-            <p>845</p>
-          </div>
-          <div class="stat-card">
-            <h3>Total arrecadado (mês)</h3>
-            <p>R$ 15.780,00</p>
-          </div>
-        </div>
+        <!-- O conteúdo dinâmico será carregado aqui pelo panel.js -->
       </div>
     </main>
   </div>

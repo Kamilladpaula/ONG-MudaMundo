@@ -1,48 +1,93 @@
 <div class="main-header">
-    <h1>Gerenciar Usuários</h1>
-    <p>Adicione, edite ou remova usuários da plataforma.</p>
+    <h1>Gestão Financeira</h1>
+    <p>Aprove ou recuse despesas, revise doações e acompanhe o fluxo de caixa.</p>
 </div>
 
-<table class="tabela-dados">
-    <thead>
-        <tr>
-            <th>Data</th>
-            <th>Descrição</th>
-            <th>Valor</th>
-            <th>Entrada/Saída</th>
-            <th>Ações</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Joana Silva</td>
-            <td>joana.silva@email.com</td>
-            <td>Diretor Geral</td>
-            <td><span class="status status-ativo">Ativo</span></td>
-            <td>
-                <a href="#" class="btn-tabela-editar">Editar</a>
-                <a href="#" class="btn-tabela-remover">Remover</a>
-            </td>
-        </tr>
-        <tr>
-            <td>Carlos Souza</td>
-            <td>carlos.s@email.com</td>
-            <td>Gerente de Projetos</td>
-            <td><span class="status status-ativo">Ativo</span></td>
-            <td>
-                <a href="#" class="btn-tabela-editar">Editar</a>
-                <a href="#" class="btn-tabela-remover">Remover</a>
-            </td>
-        </tr>
-        <tr>
-            <td>Mariana Lima</td>
-            <td>mari.lima@email.com</td>
-            <td>Voluntário</td>
-            <td><span class="status status-inativo">Inativo</span></td>
-            <td>
-                <a href="#" class="btn-tabela-editar">Editar</a>
-                <a href="#" class="btn-tabela-remover">Remover</a>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<nav class="abas-navegacao">
+    <a href="#despesas" class="aba active">Despesas Pendentes (3)</a>
+    <a href="#doacoes" class="aba">Doações Recentes (2)</a>
+    <a href="#fluxo-caixa" class="aba">Fluxo de Caixa</a>
+</nav>
+
+<div class="abas-conteudo">
+
+    <div id="despesas" class="aba-painel active">
+        <h2>Despesas Pendentes de Aprovação</h2>
+        <div class="gerenciamento-grid">
+
+            <div class="card-aprovacao">
+                <div class="card-header">
+                    <h3>Compra de Equipamentos para Projeto X</h3>
+                    <span class="status status-pendente">Pendente</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>Valor:</strong> R$ 2.500,00</p>
+                    <p><strong>Solicitante:</strong> Carlos Souza (Gerente de Projetos)</p>
+                    <p><strong>Justificativa:</strong> Aquisição de 5 GPS para monitoramento de fauna na área do projeto.</p>
+                </div>
+                <div class="card-meta">
+                    <span><strong>Projeto Vinculado:</strong> Vida Selvagem</span>
+                    <span><strong>Data de Envio:</strong> 10/10/2025</span>
+                </div>
+                <div class="card-actions">
+                    <button class="btn-tabela-recusar">Recusar</button>
+                    <button class="btn-tabela-visualizar">Ver Detalhes</button>
+                    <button class="btn-tabela-aprovar">Aprovar</button>
+                </div>
+            </div>
+
+            <div class="card-aprovacao">
+                <div class="card-header">
+                    <h3>Reembolso de Viagem - Evento Y</h3>
+                    <span class="status status-pendente">Pendente</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>Valor:</strong> R$ 450,00</p>
+                    <p><strong>Solicitante:</strong> Ana Costa (Gerente de Comunicação)</p>
+                    <p><strong>Justificativa:</strong> Despesas com transporte e alimentação para participação em congresso de ONGs.</p>
+                </div>
+                <div class="card-meta">
+                    <span><strong>Projeto Vinculado:</strong> Institucional</span>
+                    <span><strong>Data de Envio:</strong> 09/10/2025</span>
+                </div>
+                <div class="card-actions">
+                    <button class="btn-tabela-recusar">Recusar</button>
+                    <button class="btn-tabela-visualizar">Ver Detalhes</button>
+                    <button class="btn-tabela-aprovar">Aprovar</button>
+                </div>
+            </div>
+
+            <div class="card-aprovacao">
+                <div class="card-header">
+                    <h3>Material de Escritório</h3>
+                    <span class="status status-pendente">Pendente</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>Valor:</strong> R$ 320,00</p>
+                    <p><strong>Solicitante:</strong> Pedro Alves (Equipe Financeira)</p>
+                    <p><strong>Justificativa:</strong> Compra de suprimentos para o escritório (papel, toners, etc).</p>
+                </div>
+                <div class="card-meta">
+                    <span><strong>Projeto Vinculado:</strong> Administrativo</span>
+                    <span><strong>Data de Envio:</strong> 08/10/2025</span>
+                </div>
+                <div class="card-actions">
+                    <button class="btn-tabela-recusar">Recusar</button>
+                    <button class="btn-tabela-visualizar">Ver Detalhes</button>
+                    <button class="btn-tabela-aprovar">Aprovar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="doacoes" class="aba-painel">
+        <h2>Revisão de Doações Recentes</h2>
+        <p class="placeholder-relatorio">Uma tabela com as últimas doações (valor, doador, data, status de confirmação) apareceria aqui...</p>
+    </div>
+
+    <div id="fluxo-caixa" class="aba-painel">
+        <h2>Resumo do Fluxo de Caixa</h2>
+        <p class="placeholder-relatorio">Um resumo com entradas, saídas e saldo atual, talvez com um pequeno gráfico, apareceria aqui...</p>
+    </div>
+
+</div>
