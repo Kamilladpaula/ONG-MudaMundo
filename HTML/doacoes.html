@@ -16,31 +16,31 @@
 
 <body>
   <header>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Menu principal">
       <div class="container">
         <a href="../index.html" class="logo">
           <img src="../img/Logo-64px.svg" alt="Voltar para a página inicial" />
         </a>
-        <ul class="nav-menu">
-          <li>
-            <a href="sobre.html" class="tem-submenu">Sobre Nós</a>
-            <ul class="submenu">
-              <li><a href="sobre.html#historia">Nossa História</a></li>
-              <li><a href="sobre.html#equipe">Nossa Equipe</a></li>
+        <ul class="nav-menu" role="menubar">
+          <li tabindex="0" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            <a href="sobre.html" class="tem-submenu" aria-label="Sobre Nós">Sobre Nós</a>
+            <ul class="submenu" role="menu">
+              <li tabindex="0" role="menuitem"><a href="sobre.html#historia">Nossa História</a></li>
+              <li tabindex="0" role="menuitem"><a href="sobre.html#equipe">Nossa Equipe</a></li>
             </ul>
           </li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li>
-            <a href="voluntariado.html" class="tem-submenu">Voluntariado</a>
-            <ul class="submenu">
-              <li><a href="cadastro.html">Cadastre-se</a></li>
+          <li tabindex="0" role="menuitem"><a href="projetos.html">Projetos</a></li>
+          <li tabindex="0" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            <a href="voluntariado.html" class="tem-submenu" aria-label="Voluntariado">Voluntariado</a>
+            <ul class="submenu" role="menu">
+              <li tabindex="0" role="menuitem"><a href="cadastro.html">Cadastre-se</a></li>
             </ul>
           </li>
-          <li><a href="doacoes.html">Doações</a></li>
-          <li><a href="transparencia.html">Transparência</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contato.html">Contato</a></li>
-          <li><a href="login.html" class="btn-login">Login</a></li>
+          <li tabindex="0" role="menuitem"><a href="doacoes.html">Doações</a></li>
+          <li tabindex="0" role="menuitem"><a href="transparencia.html">Transparência</a></li>
+          <li tabindex="0" role="menuitem"><a href="blog.html">Blog</a></li>
+          <li tabindex="0" role="menuitem"><a href="contato.html">Contato</a></li>
+          <li tabindex="0" role="menuitem"><a href="login.html" class="btn-login">Login</a></li>
         </ul>
 
         <div class="hamburger">
