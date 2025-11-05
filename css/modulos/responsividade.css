@@ -254,6 +254,19 @@
     max-width: 100%;
   }
 
+  .timeline-wrapper {
+    padding: 1rem 0;
+    flex-wrap: nowrap;
+  }
+
+  .timeline-content-box {
+    padding: 0.75rem;
+  }
+
+  .timeline p {
+    text-align: left;
+  }
+
   /* Tabelas */
   table,
   .tabela-resumo,
