@@ -1,13 +1,13 @@
 /* Design System e Componentes Base */
-@import url(/css/modulos/design-system.css);
-@import url(/css/modulos/grid.css);
-@import url(/css/modulos/global-public.css);
+@import url(./modulos/design-system.css);
+@import url(./modulos/grid.css);
+@import url(./modulos/global-public.css);
 
 /* Seções e Componentes Específicos */
-@import url(/css/modulos/sections.css);
-@import url(/css/modulos/private.css);
-@import url(/css/modulos/dashboard.css);
-@import url(/css/modulos/projetos.css);
+@import url(./modulos/sections.css);
+@import url(./modulos/private.css);
+@import url(./modulos/dashboard.css);
+@import url(./modulos/projetos.css);
 
 /* Responsividade */
-@import url(/css/modulos/responsividade.css);
+@import url(./modulos/responsividade.css);
