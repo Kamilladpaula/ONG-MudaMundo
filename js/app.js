@@ -11,7 +11,9 @@ import {
   inicializarFiltrosProjetos,
   inicializarFiltrosBlog
 } from './components.js';
-import { inicializarAcessibilidade } from './acessibilidade.js';
+import { inicializarAcessibilidadeControles } from './acessibility.js';
+import { inicializarContraste } from './acessibility.js';
+
 
 
 /**
@@ -21,7 +23,9 @@ import { inicializarAcessibilidade } from './acessibilidade.js';
 document.addEventListener('DOMContentLoaded', () => {
 
   // ===== ACESSIBILIDADE (WCAG 2.1 AA) =====
-  inicializarAcessibilidade();
+  inicializarAcessibilidadeControles();
+  inicializarContraste();
+
 
   // --- LÓGICA PARA PÁGINAS PÚBLICAS (index.html, doacoes.html, etc.) ---
   const url = window.location.pathname;

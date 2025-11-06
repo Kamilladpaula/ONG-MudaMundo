@@ -15,163 +15,174 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+  <header role="banner">
+    <div class="a11y-group">
+      <!-- Botão de acessibilidade -->
+      <button id="a11y-toggle" class="btn-a11y" type="button" aria-pressed="false" aria-label="Ativar recursos de acessibilidade">
+        ♿
+      </button>
+      <button id="contrast-toggle" class="btn-contrast" type="button" aria-pressed="false" aria-label="Ativar alto contraste">
+        🌗
+      </button>
+    </div>
+    <nav class="navbar" aria-label="Menu principal">
       <div class="container">
-        <a href="../index.html" class="logo">
+        <a href="../index.html" class="logo" aria-label="Página inicial Muda Mundo">
           <img src="../img/Logo-64px.svg" alt="Voltar para a página inicial" />
         </a>
-        <ul class="nav-menu">
-          <li>
-            <a href="sobre.html" class="tem-submenu">Sobre Nós</a>
-            <ul class="submenu">
-              <li><a href="sobre.html#historia">Nossa História</a></li>
-              <li><a href="sobre.html#equipe">Nossa Equipe</a></li>
+        <ul class="nav-menu" id="menu-principal" role="menubar">
+          <li role="none">
+            <a href="sobre.html" class="tem-submenu" role="menuitem" aria-haspopup="true" aria-expanded="false">Sobre Nós</a>
+            <ul class="submenu" role="menu">
+              <li role="none"><a href="sobre.html#historia" role="menuitem">Nossa História</a></li>
+              <li role="none"><a href="sobre.html#equipe" role="menuitem">Nossa Equipe</a></li>
             </ul>
           </li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li>
-            <a href="voluntariado.html" class="tem-submenu">Voluntariado</a>
-            <ul class="submenu">
-              <li><a href="cadastro.html">Cadastre-se</a></li>
+          <li role="none"><a href="projetos.html" role="menuitem">Projetos</a></li>
+          <li role="none">
+            <a href="voluntariado.html" class="tem-submenu" role="menuitem" aria-haspopup="true" aria-expanded="false">Voluntariado</a>
+            <ul class="submenu" role="menu">
+              <li role="none"><a href="cadastro.html" role="menuitem">Cadastre-se</a></li>
             </ul>
           </li>
-          <li><a href="doacoes.html">Doações</a></li>
-          <li><a href="transparencia.html">Transparência</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contato.html">Contato</a></li>
-          <li><a href="login.html" class="btn-login">Login</a></li>
+          <li role="none"><a href="doacoes.html" role="menuitem">Doações</a></li>
+          <li role="none"><a href="transparencia.html" role="menuitem">Transparência</a></li>
+          <li role="none"><a href="blog.html" role="menuitem">Blog</a></li>
+          <li role="none"><a href="contato.html" role="menuitem">Contato</a></li>
+          <li role="none"><a href="login.html" class="btn-login" role="menuitem">Login</a></li>
         </ul>
 
-        <div class="hamburger">
+        <button class="hamburger" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-        </div>
+        </button>
       </div>
     </nav>
   </header>
   <main>
     <div class="container">
-      <section class="secao-universo">
-        <h1>Fique por Dentro do Nosso Universo</h1>
+      <section class="secao-universo" role="region" aria-labelledby="titulo-universo">
+        <h1 id="titulo-universo">Fique por Dentro do Nosso Universo</h1>
         <p class="subtitulo">Explore nossas últimas notícias, mergulhe em histórias inspiradoras e aprenda dicas para um dia a dia mais sustentável. Aqui, cada post é uma janela para a mudança que estamos construindo juntos.</p>
       </section>
-      <section class="secao-blog">
-        <nav class="filtros-categorias">
+      <section class="secao-blog" role="region" aria-labelledby="titulo-blog">
+        <h1 id="titulo-blog">Blog</h1>
+
+        <nav class="filtros-categorias" role="navigation" aria-label="Filtros de categorias do blog">
           <ul>
-            <li><a href="#" class="ativo" data-filtro="todos">Todos</a></li>
-            <li><a href="#" data-filtro="noticias">Notícias</a></li>
-            <li><a href="#" data-filtro="campanhas">Campanhas</a></li>
-            <li><a href="#" data-filtro="historias-de-sucesso">Histórias de Sucesso</a></li>
-            <li><a href="#" data-filtro="dicas-de-sustentabilidade">Dicas de Sustentabilidade</a></li>
+            <li role="listitem"><a href="#" class="ativo" data-filtro="todos" aria-current="true">Todos</a></li>
+            <li role="listitem"><a href="#" data-filtro="noticias">Notícias</a></li>
+            <li role="listitem"><a href="#" data-filtro="campanhas">Campanhas</a></li>
+            <li role="listitem"><a href="#" data-filtro="historias-de-sucesso">Histórias de Sucesso</a></li>
+            <li role="listitem"><a href="#" data-filtro="dicas-de-sustentabilidade">Dicas de Sustentabilidade</a></li>
           </ul>
         </nav>
 
-        <div class="posts-grid">
-          <article class="post-card" data-categoria="noticias">
-            <a href="#">
+        <div class="posts-grid" role="list" aria-label="Posts do blog">
+          <article class="post-card" data-categoria="noticias" role="listitem" tabindex="0">
+            <a href="#" aria-labelledby="post-plantio" aria-describedby="meta-plantio resumo-plantio">
               <img src="../img/Mutirao_voluntarios_blog.png" alt="Voluntários plantando árvores em um grande mutirão.">
               <div class="card-content">
                 <span class="post-categoria">Notícias</span>
-                <h3>Muda Mundo realiza o maior plantio de sua história: 1.000 árvores em um dia!
-                </h3>
-                <p class="post-meta">Publicado em 05 de outubro de 2025</p>
-                <p class="post-resumo">Com a ajuda de mais de 150 voluntários, transformamos uma
+                <h3 id="post-plantio">Muda Mundo realiza o maior plantio de sua história: 1.000 árvores em um dia!</h3>
+                <p id="meta-plantio" class="post-meta">Publicado em 05 de outubro de 2025</p>
+                <p id="resumo-plantio" class="post-resumo">Com a ajuda de mais de 150 voluntários, transformamos uma
                   área degradada em um futuro bosque. Saiba mais sobre o impacto desta ação...</p>
               </div>
             </a>
           </article>
 
-          <article class="post-card" data-categoria="historias-de-sucesso">
-            <a href="#">
+          <article class="post-card" data-categoria="historias-de-sucesso" role="listitem" tabindex="0">
+            <a href="#" aria-labelledby="post-juba" aria-describedby="meta-juba resumo-juba">
               <img src="../img/Juba_onça.jpg" alt="Onça pintada caminhando pela mata.">
               <div class="card-content">
                 <span class="post-categoria">Histórias de Sucesso</span>
-                <h3>Conheça a história de Juba, a onça resgatada que voltou à natureza.</h3>
-                <p class="post-meta">Publicado em 28 de setembro de 2025</p>
-                <p class="post-resumo">Após meses de reabilitação em nosso centro, Juba foi
+                <h3 id="post-juba">Conheça a história de Juba, a onça resgatada que voltou à natureza.</h3>
+                <p id="meta-juba" class="post-meta">Publicado em 28 de setembro de 2025</p>
+                <p id="resumo-juba" class="post-resumo">Após meses de reabilitação em nosso centro, Juba foi
                   monitorada e reintroduzida com sucesso em seu habitat natural no Pantanal...</p>
               </div>
             </a>
           </article>
 
-          <article class="post-card" data-categoria="dicas-de-sustentabilidade">
-            <a href="#">
+          <article class="post-card" data-categoria="dicas-de-sustentabilidade" role="listitem" tabindex="0">
+            <a href="#" aria-labelledby="post-plastico" aria-describedby="meta-plastico resumo-plastico">
               <img src="../img/canudos_metal.webp" alt="Itens sustentáveis como sacola de pano e canudo de metal.">
               <div class="card-content">
                 <span class="post-categoria">Dicas de Sustentabilidade</span>
-                <h3>5 Dicas para reduzir o uso de plástico no dia a dia.</h3>
-                <p class="post-meta">Publicado em 15 de setembro de 2025</p>
-                <p class="post-resumo">Pequenas mudanças de hábito podem gerar um impacto
+                <h3 id="post-plastico">5 Dicas para reduzir o uso de plástico no dia a dia.</h3>
+                <p id="meta-plastico" class="post-meta">Publicado em 15 de setembro de 2025</p>
+                <p id="resumo-plastico" class="post-resumo">Pequenas mudanças de hábito podem gerar um impacto
                   gigantesco. Descubra como substituir itens descartáveis e viver de forma mais
                   consciente...</p>
               </div>
             </a>
           </article>
 
-          <article class="post-card" data-categoria="campanhas">
-            <a href="#">
+          <article class="post-card" data-categoria="campanhas" role="listitem" tabindex="0">
+            <a href="#" aria-labelledby="post-cerrado" aria-describedby="meta-cerrado resumo-cerrado">
               <img src="../img/Cerrado.jpg" alt="Paisagem do cerrado com sinal de alerta.">
               <div class="card-content">
                 <span class="post-categoria">Campanhas</span>
-                <h3>Campanha "SOS Animais do Cerrado" atinge 50% da meta em duas semanas.</h3>
-                <p class="post-meta">Publicado em 10 de setembro de 2025</p>
-                <p class="post-resumo">A resposta da comunidade tem sido incrível! Sua doação está
+                <h3 id="post-cerrado">Campanha "SOS Animais do Cerrado" atinge 50% da meta em duas semanas.</h3>
+                <p id="meta-cerrado" class="post-meta">Publicado em 10 de setembro de 2025</p>
+                <p id="resumo-cerrado" class="post-resumo">A resposta da comunidade tem sido incrível! Sua doação está
                   ajudando a custear o resgate e tratamento de dezenas de animais afetados...</p>
               </div>
             </a>
           </article>
 
-          <article class="post-card" data-categoria="noticias">
-            <a href="#">
+          <article class="post-card" data-categoria="noticias" role="listitem" tabindex="0">
+            <a href="#" aria-labelledby="post-educacao" aria-describedby="meta-educacao resumo-educacao">
               <img src="../img/eduambiental-escolas.png" alt="Crianças em uma oficina de educação ambiental.">
               <div class="card-content">
                 <span class="post-categoria">Notícias</span>
-                <h3>Nosso programa de educação ambiental alcança 10 novas escolas.</h3>
-                <p class="post-meta">Publicado em 02 de setembro de 2025</p>
-                <p class="post-resumo">Levamos oficinas sobre reciclagem e biodiversidade para mais
+                <h3 id="post-educacao">Nosso programa de educação ambiental alcança 10 novas escolas.</h3>
+                <p id="meta-educacao" class="post-meta">Publicado em 02 de setembro de 2025</p>
+                <p id="resumo-educacao" class="post-resumo">Levamos oficinas sobre reciclagem e biodiversidade para mais
                   de 500 crianças na rede pública, formando a nova geração de guardiões do
                   planeta...</p>
               </div>
             </a>
           </article>
 
-          <article class="post-card" data-categoria="dicas-de-sustentabilidade">
-            <a href="#">
+          <article class="post-card" data-categoria="dicas-de-sustentabilidade" role="listitem" tabindex="0">
+            <a href="#" aria-labelledby="post-plastico" aria-describedby="meta-plastico resumo-plastico">
               <img src="../img/lixeira_reciclagem.png" alt="Símbolos de reciclagem em lixeiras coloridas.">
               <div class="card-content">
                 <span class="post-categoria">Dicas de Sustentabilidade</span>
-                <h3>Você sabe como separar o lixo corretamente? Um guia definitivo.</h3>
-                <p class="post-meta">Publicado em 25 de agosto de 2025</p>
-                <p class="post-resumo">Separar o lixo pode parecer complicado, mas não é. Entenda o
+                <h3 id="post-plastico">Você sabe como separar o lixo corretamente? Um guia definitivo.</h3>
+                <p id="meta-plastico" class="post-meta">Publicado em 25 de agosto de 2025</p>
+                <p id="resumo-plastico" class="post-resumo">Separar o lixo pode parecer complicado, mas não é. Entenda o
                   que pode e o que não pode ser reciclado e faça sua parte pelo meio ambiente...
                 </p>
               </div>
             </a>
           </article>
         </div>
-        <nav class="paginacao">
-          <a href="#" class="prev">Anterior</a>
-          <a href="#" class="page active">1</a>
+        <nav class="paginacao" aria-label="Navegação de páginas do blog">
+          <a href="#" class="prev" aria-label="Página anterior">Anterior</a>
+          <a href="#" class="page active" aria-current="page">1</a>
           <a href="#" class="page">2</a>
           <a href="#" class="page">3</a>
-          <a href="#" class="next">Próxima</a>
+          <a href="#" class="next" aria-label="Próxima página">Próxima</a>
         </nav>
       </section>
     </div>
   </main>
 
   <!-- Modal de Newsletter -->
-  <div class="modal" id="modalNewsletter">
+  <div class="modal" id="modalNewsletter" role="dialog" aria-labelledby="titulo-news" aria-modal="true" hidden>
     <div class="modal-content">
       <div class="modal-header">
-        <h3>Inscreva-se em nossa Newsletter</h3>
+        <h3 id="titulo-news">Inscreva-se em nossa Newsletter</h3>
         <button class="modal-close">&times;</button>
       </div>
       <div class="modal-body">
         <p>Fique por dentro de todas as nossas ações e novidades!</p>
-        <form class="form-newsletter">
+        <form class="form-newsletter" aria-label="Formulário de inscrição na newsletter">
           <div class="form-group">
             <label for="newsletter-email">Seu email:</label>
             <input type="email" id="newsletter-email" placeholder="exemplo@email.com" required>

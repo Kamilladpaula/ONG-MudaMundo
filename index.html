@@ -13,69 +13,52 @@
   <link rel="stylesheet" href="css/style.css">
   <script type="module" src="js/app.js" defer></script>
 
-  <!-- Estilo rápido para foco visível -->
-  <style>
-    :focus {
-      outline: 3px solid #0e9401;
-      outline-offset: 3px;
-    }
-
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: #0e9401;
-      color: #fff;
-      padding: 8px 16px;
-      z-index: 1000;
-      border-radius: 0 0 8px 8px;
-      text-decoration: none;
-      transition: top 0.3s;
-    }
-
-    .skip-link:focus {
-      top: 0;
-    }
-  </style>
 </head>
 
 <body>
   <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
   <header role="banner">
+    <div class="a11y-group">
+      <!-- Botão de acessibilidade -->
+      <button id="a11y-toggle" class="btn-a11y" type="button" aria-pressed="false" aria-label="Ativar recursos de acessibilidade">
+        ♿
+      </button>
+      <button id="contrast-toggle" class="btn-contrast" type="button" aria-pressed="false" aria-label="Ativar alto contraste">
+        🌗
+      </button>
+    </div>
     <nav class="navbar" aria-label="Menu principal">
       <div class="container">
         <a href="index.html" class="logo" aria-label="Página inicial Muda Mundo">
           <img src="img/Logo-64px.svg" alt="Voltar para a página inicial" />
         </a>
         <ul class="nav-menu" id="menu-principal" role="menubar">
-          <li>
-            <a href="HTML/sobre.html" class="tem-submenu" role="menuitem" aria-haspopup="true"
-            aria-expanded="false">Sobre Nós</a>
-            <ul class="submenu"  role="menu">
-              <li><a href="HTML/sobre.html#historia" role="menuitem">Nossa História</a></li>
-              <li><a href="HTML/sobre.html#equipe" role="menuitem">Nossa Equipe</a></li>
-            </ul>
-          </li>
-          <li><a href="HTML/projetos.html" role="menuitem">Projetos</a></li>
-          <li>
-            <a href="HTML/voluntariado.html" class="tem-submenu" role="menuitem" aria-haspopup="true"
-            aria-expanded="false">Voluntariado</a>
+          <li role="none">
+            <a href="HTML/sobre.html" class="tem-submenu" role="menuitem" aria-haspopup="true" aria-expanded="false">Sobre Nós</a>
             <ul class="submenu" role="menu">
-              <li><a href="HTML/cadastro.html" role="menuitem">Cadastre-se</a></li>
+              <li role="none"><a href="HTML/sobre.html#historia" role="menuitem">Nossa História</a></li>
+              <li role="none"><a href="HTML/sobre.html#equipe" role="menuitem">Nossa Equipe</a></li>
             </ul>
           </li>
-          <li> <a href="HTML/doacoes.html" role="menuitem">Doações</a></li>
-          <li><a href="HTML/transparencia.html" role="menuitem">Transparência</a></li>
-          <li><a href="HTML/blog.html" role="menuitem">Blog</a></li>
-          <li><a href="HTML/contato.html" role="menuitem">Contato</a></li>
-          <li><a href="HTML/login.html" class="btn-login" role="menuitem">Login</a></li>
+          <li role="none"><a href="HTML/projetos.html" role="menuitem">Projetos</a></li>
+          <li role="none">
+            <a href="HTML/voluntariado.html" class="tem-submenu" role="menuitem" aria-haspopup="true" aria-expanded="false">Voluntariado</a>
+            <ul class="submenu" role="menu">
+              <li role="none"><a href="HTML/cadastro.html" role="menuitem">Cadastre-se</a></li>
+            </ul>
+          </li>
+          <li role="none"><a href="HTML/doacoes.html" role="menuitem">Doações</a></li>
+          <li role="none"><a href="HTML/transparencia.html" role="menuitem">Transparência</a></li>
+          <li role="none"><a href="HTML/blog.html" role="menuitem">Blog</a></li>
+          <li role="none"><a href="HTML/contato.html" role="menuitem">Contato</a></li>
+          <li role="none"><a href="HTML/login.html" class="btn-login" role="menuitem">Login</a></li>
         </ul>
 
-        <div class="hamburger" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <button class="hamburger" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-        </div>
+        </button>
       </div>
     </nav>
   </header>

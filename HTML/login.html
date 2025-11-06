@@ -15,66 +15,76 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+  <header role="banner">
+    <div class="a11y-group">
+      <!-- Botão de acessibilidade -->
+      <button id="a11y-toggle" class="btn-a11y" type="button" aria-pressed="false" aria-label="Ativar recursos de acessibilidade">
+        ♿
+      </button>
+      <button id="contrast-toggle" class="btn-contrast" type="button" aria-pressed="false" aria-label="Ativar alto contraste">
+        🌗
+      </button>
+    </div>
+    <nav class="navbar" aria-label="Menu principal">
       <div class="container">
-        <a href="../index.html" class="logo">
+        <a href="../index.html" class="logo" aria-label="Página inicial Muda Mundo">
           <img src="../img/Logo-64px.svg" alt="Voltar para a página inicial" />
         </a>
-        <ul class="nav-menu">
-          <li>
-            <a href="sobre.html" class="tem-submenu">Sobre Nós</a>
-            <ul class="submenu">
-              <li><a href="sobre.html#historia">Nossa História</a></li>
-              <li><a href="sobre.html#equipe">Nossa Equipe</a></li>
+        <ul class="nav-menu" id="menu-principal" role="menubar">
+          <li role="none">
+            <a href="sobre.html" class="tem-submenu" role="menuitem" aria-haspopup="true" aria-expanded="false">Sobre Nós</a>
+            <ul class="submenu" role="menu">
+              <li role="none"><a href="sobre.html#historia" role="menuitem">Nossa História</a></li>
+              <li role="none"><a href="sobre.html#equipe" role="menuitem">Nossa Equipe</a></li>
             </ul>
           </li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li>
-            <a href="voluntariado.html" class="tem-submenu">Voluntariado</a>
-            <ul class="submenu">
-              <li><a href="cadastro.html">Cadastre-se</a></li>
+          <li role="none"><a href="projetos.html" role="menuitem">Projetos</a></li>
+          <li role="none">
+            <a href="voluntariado.html" class="tem-submenu" role="menuitem" aria-haspopup="true" aria-expanded="false">Voluntariado</a>
+            <ul class="submenu" role="menu">
+              <li role="none"><a href="cadastro.html" role="menuitem">Cadastre-se</a></li>
             </ul>
           </li>
-          <li><a href="doacoes.html">Doações</a></li>
-          <li><a href="transparencia.html">Transparência</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contato.html">Contato</a></li>
-          <li><a href="login.html" class="btn-login">Login</a></li>
+          <li role="none"><a href="doacoes.html" role="menuitem">Doações</a></li>
+          <li role="none"><a href="transparencia.html" role="menuitem">Transparência</a></li>
+          <li role="none"><a href="blog.html" role="menuitem">Blog</a></li>
+          <li role="none"><a href="contato.html" role="menuitem">Contato</a></li>
+          <li role="none"><a href="login.html" class="btn-login" role="menuitem">Login</a></li>
         </ul>
 
-        <div class="hamburger">
+        <button class="hamburger" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-        </div>
+        </button>
       </div>
     </nav>
   </header>
   <main>
     <div class="container">
-      <section class="login-secao">
+      <section class="login-secao" role="region" aria-labelledby="titulo-login">
         <div class="login-wrapper">
-          <h2>Acesse sua Conta</h2>
+          <h2 id="titulo-login">Acesse sua Conta</h2>
           <p class="subtitulo-login">Bem-vindo de volta! Faça o login para continuar.</p>
 
-          <form class="form-login" autocomplete="off" novalidate>
+          <form class="form-login" id="form-login" aria-labelledby="titulo-login" autocomplete="on" novalidate>
             <div class="form-group">
               <label for="email-login">E-mail</label>
-              <input type="email" id="email-login" name="email-login" required placeholder="seu.email@exemplo.com">
+              <input type="email" id="email-login" name="email-login" required placeholder="seu.email@exemplo.com" inputmode="email" aria-required="true">
             </div>
             <div class="form-group">
               <label for="senha-login">Senha</label>
-              <input type="password" id="senha-login" name="senha-login" required placeholder="Sua senha" autocomplete="current-password">
+              <input type="password" id="senha-login" name="senha-login" required placeholder="Sua senha" autocomplete="current-password" aria-required="true">
             </div>
 
-            <a href="recuperar-senha.html" class="link-esqueci-senha">Esqueceu sua senha?</a>
+            <a href="recuperar-senha.html" class="link-esqueci-senha" aria-label="Link para a página de recuperação de senha">Esqueceu sua senha?</a>
 
-            <button type="submit" class="btn btn-principal">Entrar</button>
+            <button type="submit" class="btn btn-principal" aria-label="Botão para entrar na conta">Entrar</button>
           </form>
 
-          <div class="login-rodape">
-            <p>Ainda não é voluntário? <a href="cadastro.html">Cadastre-se aqui</a></p>
+          <div class="login-rodape" role="contentinfo">
+            <p>Ainda não é voluntário? <a href="cadastro.html" aria-label="Ir para página de cadastro de voluntário">Cadastre-se aqui</a></p>
           </div>
         </div>
       </section>

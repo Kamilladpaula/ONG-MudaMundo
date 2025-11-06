@@ -15,88 +15,99 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+  <header role="banner">
+    <div class="a11y-group">
+      <!-- Botão de acessibilidade -->
+      <button id="a11y-toggle" class="btn-a11y" type="button" aria-pressed="false" aria-label="Ativar recursos de acessibilidade">
+        ♿
+      </button>
+      <button id="contrast-toggle" class="btn-contrast" type="button" aria-pressed="false" aria-label="Ativar alto contraste">
+        🌗
+      </button>
+    </div>
+    <nav class="navbar" aria-label="Menu principal">
       <div class="container">
-        <a href="../index.html" class="logo">
+        <a href="../index.html" class="logo" aria-label="Página inicial Muda Mundo">
           <img src="../img/Logo-64px.svg" alt="Voltar para a página inicial" />
         </a>
-        <ul class="nav-menu">
-          <li>
-            <a href="sobre.html" class="tem-submenu">Sobre Nós</a>
-            <ul class="submenu">
-              <li><a href="sobre.html#historia">Nossa História</a></li>
-              <li><a href="sobre.html#equipe">Nossa Equipe</a></li>
+        <ul class="nav-menu" id="menu-principal" role="menubar">
+          <li role="none">
+            <a href="sobre.html" class="tem-submenu" role="menuitem" aria-haspopup="true" aria-expanded="false">Sobre Nós</a>
+            <ul class="submenu" role="menu">
+              <li role="none"><a href="sobre.html#historia" role="menuitem">Nossa História</a></li>
+              <li role="none"><a href="sobre.html#equipe" role="menuitem">Nossa Equipe</a></li>
             </ul>
           </li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li>
-            <a href="voluntariado.html" class="tem-submenu">Voluntariado</a>
-            <ul class="submenu">
-              <li><a href="cadastro.html">Cadastre-se</a></li>
+          <li role="none"><a href="projetos.html" role="menuitem">Projetos</a></li>
+          <li role="none">
+            <a href="voluntariado.html" class="tem-submenu" role="menuitem" aria-haspopup="true" aria-expanded="false">Voluntariado</a>
+            <ul class="submenu" role="menu">
+              <li role="none"><a href="cadastro.html" role="menuitem">Cadastre-se</a></li>
             </ul>
           </li>
-          <li><a href="doacoes.html">Doações</a></li>
-          <li><a href="transparencia.html">Transparência</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contato.html">Contato</a></li>
-          <li><a href="login.html" class="btn-login">Login</a></li>
+          <li role="none"><a href="doacoes.html" role="menuitem">Doações</a></li>
+          <li role="none"><a href="transparencia.html" role="menuitem">Transparência</a></li>
+          <li role="none"><a href="blog.html" role="menuitem">Blog</a></li>
+          <li role="none"><a href="contato.html" role="menuitem">Contato</a></li>
+          <li role="none"><a href="login.html" class="btn-login" role="menuitem">Login</a></li>
         </ul>
 
-        <div class="hamburger">
+        <button class="hamburger" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-        </div>
+        </button>
       </div>
     </nav>
   </header>
   <main>
     <div class="container">
-      <section class="secao-doacao">
+      <section class="secao-doacao" role="region" aria-label="Informações sobre como sua doação é utilizada">
         <h1>Sua Doação Cria Vida</h1>
         <p class="subtitulo">Cada real doado é investido diretamente em nossos projetos. Sua contribuição nos ajuda a comprar equipamentos, medicamentos, mudas de árvores e a manter nossas equipes em campo.
         </p>
         <p>Como seu apoio se transforma em ação:</p>
-        <div class="cards">
-          <div class="card-info">
+        <div class="cards" role="list">
+          <div class="card-info" role="listitem" tabindex="0" aria-label="R$30 alimenta um animal resgatado por uma semana">
             <h3>R$ 30</h3>
             <p>Custeia o alimento de um animal resgatado por uma semana.</p>
           </div>
-          <div class="card-info">
+          <div class="card-info" role="listitem" tabindex="0" aria-label="R$70 permite o plantio de 10 novas árvores nativas">
             <h3>R$ 70</h3>
             <p>Permite o plantio de 10 novas árvores nativas.</p>
           </div>
-          <div class="card-info">
+          <div class="card-info" role="listitem" tabindex="0" aria-label="R$150 apoia uma oficina de educação ambiental para 20 crianças">
             <h3>R$ 150</h3>
             <p>Apoia uma oficina de educação ambiental para 20 crianças.</p>
           </div>
       </section>
-      <section class="campanha-ativa">
-        <h2>Apoie uma Causa Específica</h2>
-        <div class="campanha-card">
-          <h3>SOS Animais do Cerrado</h3>
-          <p class="campanha-descricao">Os incêndios recentes deixaram muitos animais feridos e sem lar.
+      <section class="campanha-ativa" role="region" aria-label="Campanha de doação ativa">
+        <h2 id="titulo-campanha">Apoie uma Causa Específica</h2>
+        <article class="campanha-card" aria-labelledby="titulo-campanha-sos" aria-describedby="descricao-campanha-sos">
+          <h3 id="titulo-campanha-sos">SOS Animais do Cerrado</h3>
+          <p id="descricao-campanha-sos" class="campanha-descricao">Os incêndios recentes deixaram muitos animais feridos e sem lar.
             Precisamos de ajuda para resgatá-los, oferecer tratamento veterinário e recuperar a área com
             o plantio de novas árvores.</p>
-          <div class="meta-arrecadacao">
+          <div class="meta-arrecadacao" aria-label="progresso de arrecadação">
             <div class="progresso-info">
               <span>Arrecadado: <strong>R$ 22.500</strong></span>
               <span>Meta: R$ 50.000</span>
             </div>
-            <progress class="SOS" value="22500" max="50000"></progress>
+            <progress class="SOS" value="22500" max="50000" aria-valuenow="22500"
+            aria-valuemax="50000" aria-label="45% da meta atingida"></progress>
           </div>
 
           <!-- Coluna do Formulário -->
           <div class="doacao-form-container">
-            <form action="#" method="POST" class="form-doacao">
-              <fieldset>
+            <form action="#" method="POST" class="form-doacao" aria-label="Formulário de doação">
+              <fieldset aria-describedby="desc-valor">
                 <legend>1. Escolha o valor</legend>
                 <div class="valor-options">
                   <label><input type="radio" name="valor-doacao" value="30"><span>R$ 30</span></label>
                   <label><input type="radio" name="valor-doacao" value="70" checked><span>R$ 70</span></label>
                   <label><input type="radio" name="valor-doacao" value="150"><span>R$ 150</span></label>
-                  <input type="number" name="outro-valor" placeholder="Outro (R$)">
+                  <input type="number" name="outro-valor" placeholder="Outro (R$)" aria-label="Outro valor de doação em reais">
                 </div>
               </fieldset>
 
@@ -117,7 +128,7 @@
                 </div>
 
                 <!-- Detalhes do Pagamento (Ocultos por padrão) -->
-                <div id="detalhes-pagamento" class="detalhes-pagamento-container">
+                <div id="detalhes-pagamento" class="detalhes-pagamento-container" aria-live="polite">
                   <!-- Detalhes PIX -->
                   <div id="detalhes-pix" class="metodo-detalhes">
                     <p>Escaneie o QR Code com o app do seu banco:</p>
@@ -129,20 +140,20 @@
                   <div id="detalhes-cartao" class="metodo-detalhes hidden">
                     <div class="form-group">
                       <label for="cartao-numero">Número do Cartão</label>
-                      <input type="text" id="cartao-numero" placeholder="0000 0000 0000 0000">
+                      <input type="text" id="cartao-numero" placeholder="0000 0000 0000 0000" aria-label="Número do cartão de crédito">
                     </div>
                     <div class="form-group">
                       <label for="cartao-nome">Nome no Cartão</label>
-                      <input type="text" id="cartao-nome" placeholder="Como está escrito no cartão">
+                      <input type="text" id="cartao-nome" placeholder="Como está escrito no cartão" aria-label="Nome no cartão de crédito">
                     </div>
                     <div class="form-grid-2">
                       <div class="form-group">
                         <label for="cartao-validade">Validade (MM/AA)</label>
-                        <input type="text" id="cartao-validade" placeholder="MM/AA">
+                        <input type="text" id="cartao-validade" placeholder="MM/AA" aria-label="Validade do cartão de crédito">
                       </div>
                       <div class="form-group">
                         <label for="cartao-cvv">CVV</label>
-                        <input type="text" id="cartao-cvv" placeholder="123">
+                        <input type="text" id="cartao-cvv" placeholder="123" aria-label="CVV do cartão de crédito">
                       </div>
                     </div>
                   </div>
@@ -163,7 +174,7 @@
                   </div>
                   <div class="form-group">
                     <label for="cpf-doador">CPF:</label>
-                    <input type="cpf" id="cpf-doador" name="cpf" required>
+                    <input type="cpf" id="cpf-doador" name="cpf" required inputmode="numeric">
                   </div>
                   <div class="form-group">
                     <label for="email-doador">E-mail:</label>
@@ -174,7 +185,7 @@
               <button type="submit" class="btn-principal">Confirmar Doação</button>
             </form>
           </div>
-        </div>
+        </article>
       </section>
     </div>
   </main>
