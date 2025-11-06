@@ -12,38 +12,66 @@
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
   <script type="module" src="js/app.js" defer></script>
+
+  <!-- Estilo rápido para foco visível -->
+  <style>
+    :focus {
+      outline: 3px solid #0e9401;
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #0e9401;
+      color: #fff;
+      padding: 8px 16px;
+      z-index: 1000;
+      border-radius: 0 0 8px 8px;
+      text-decoration: none;
+      transition: top 0.3s;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+  </style>
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+  <header role="banner">
+    <nav class="navbar" aria-label="Menu principal">
       <div class="container">
-        <a href="index.html" class="logo">
+        <a href="index.html" class="logo" aria-label="Página inicial Muda Mundo">
           <img src="img/Logo-64px.svg" alt="Voltar para a página inicial" />
         </a>
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="menu-principal" role="menubar">
           <li>
-            <a href="HTML/sobre.html" class="tem-submenu">Sobre Nós</a>
-            <ul class="submenu">
-              <li><a href="HTML/sobre.html#historia">Nossa História</a></li>
-              <li><a href="HTML/sobre.html#equipe">Nossa Equipe</a></li>
+            <a href="HTML/sobre.html" class="tem-submenu" role="menuitem" aria-haspopup="true"
+            aria-expanded="false">Sobre Nós</a>
+            <ul class="submenu"  role="menu">
+              <li><a href="HTML/sobre.html#historia" role="menuitem">Nossa História</a></li>
+              <li><a href="HTML/sobre.html#equipe" role="menuitem">Nossa Equipe</a></li>
             </ul>
           </li>
-          <li><a href="HTML/projetos.html">Projetos</a></li>
+          <li><a href="HTML/projetos.html" role="menuitem">Projetos</a></li>
           <li>
-            <a href="HTML/voluntariado.html" class="tem-submenu">Voluntariado</a>
-            <ul class="submenu">
-              <li><a href="HTML/cadastro.html">Cadastre-se</a></li>
+            <a href="HTML/voluntariado.html" class="tem-submenu" role="menuitem" aria-haspopup="true"
+            aria-expanded="false">Voluntariado</a>
+            <ul class="submenu" role="menu">
+              <li><a href="HTML/cadastro.html" role="menuitem">Cadastre-se</a></li>
             </ul>
           </li>
-          <li> <a href="HTML/doacoes.html">Doações</a></li>
-          <li><a href="HTML/transparencia.html">Transparência</a></li>
-          <li><a href="HTML/blog.html">Blog</a></li>
-          <li><a href="HTML/contato.html">Contato</a></li>
-          <li><a href="HTML/login.html" class="btn-login">Login</a></li>
+          <li> <a href="HTML/doacoes.html" role="menuitem">Doações</a></li>
+          <li><a href="HTML/transparencia.html" role="menuitem">Transparência</a></li>
+          <li><a href="HTML/blog.html" role="menuitem">Blog</a></li>
+          <li><a href="HTML/contato.html" role="menuitem">Contato</a></li>
+          <li><a href="HTML/login.html" class="btn-login" role="menuitem">Login</a></li>
         </ul>
 
-        <div class="hamburger">
+        <div class="hamburger" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -51,7 +79,7 @@
       </div>
     </nav>
   </header>
-  <main>
+  <main id="conteudo-principal" tabindex="-1">
     <section class="secao-entrada">
       <img src="img/Banner-novo.svg" alt="Banner principal da ONG" class="banner-principal" />
       <div class="banner-container">
@@ -59,14 +87,14 @@
         <h2>Conexões que criam vida</h2>
         <p>Acreditamos que a saúde do planeta, o bem-estar dos animais e a felicidade da humanidade estão interligados.</p>
         <p>Junte-se a nós para fazer a diferença!</p>
-        <a href="../HTML/voluntariado.html" class="btn-faca-parte">Faça parte da MUDANÇA!</a>
+        <a href="../HTML/voluntariado.html" class="btn-faca-parte" role="button">Faça parte da MUDANÇA!</a>
       </div>
     </section>
     <div class="container">
       <!-- Alerta de campanha atual -->
       <div class="alert alert-info" role="alert">
         <strong>Campanha em Andamento:</strong> Ajude-nos a plantar mais 1.000 árvores neste mês!
-        <a href="HTML/doacoes.html#campanhas" class="btn btn-principal">Participar</a>
+        <a href="HTML/doacoes.html#campanhas" class="btn btn-principal" role="button">Participar</a>
       </div>
       <section class="secao-white">
         <div class="grid">
@@ -104,25 +132,25 @@
       <section class="inspiracao">
         <h2>Juntos, já conquistamos:</h2>
         <div class="grid">
-          <div class="card">
+          <div class="card" tabindex="0">
             <div class="badge badge-primario">Meio Ambiente</div>
             <img src="img/muda-icon.svg" alt="Ícone de árvore" />
             <h3>+ 5.000</h3>
             <p>Árvores plantadas</p>
           </div>
-          <div class="card">
+          <div class="card" tabindex="0">
             <div class="badge badge-secundario">Proteção Animal</div>
             <img src="img/dog-icon2.svg" alt="Ícone de cachorro" />
             <h3>+ 300</h3>
             <p>Animais resgatados</p>
           </div>
-          <div class="card">
+          <div class="card" tabindex="0">
             <div class="badge badge-info">Impacto Social</div>
             <img src="img/comunidade-icon.svg" alt="Ícone de comunidade" />
             <h3>20</h3>
             <p>Comunidades apoiadas</p>
           </div>
-          <div class="card">
+          <div class="card" tabindex="0">
             <div class="badge badge-alerta">Voluntariado</div>
             <img src="img/voluntario-icon.svg" alt="Ícone de voluntário" />
             <h3>+ 800</h3>
@@ -132,7 +160,7 @@
       </section>
     </div>
   </main>
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-content">
       <div class="footer-social">
         <a href="https://facebook.com/sua-ong" target="_blank" aria-label="Link para o Facebook">
@@ -147,7 +175,7 @@
       </div>
 
       <div class="footer-center">
-        <a href="index.html" class="footer-logo">
+        <a href="index.html" class="footer-logo" aria-label="Página inicial Muda Mundo">
           <img src="img/Logo-nome-120px.svg" alt="Logo Muda Mundo">
         </a>
       </div>
