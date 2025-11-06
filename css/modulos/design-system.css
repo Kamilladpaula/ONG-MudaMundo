@@ -579,3 +579,248 @@ body {
   color: var(--cinza-claro);
   margin-bottom: 2rem;
 }
+
+
+/* ==== Grupo de botões de acessibilidade ==== */
+.a11y-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  /* controla a distância entre ♿ e 🌗 */
+}
+
+/* Ajustes visuais dos botões */
+
+
+.btn-a11y:hover,
+.btn-contrast:hover {
+  transform: scale(1.1);
+}
+
+.btn-a11y:focus,
+.btn-contrast:focus {
+  outline: 2px solid #0e9401;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ================================================
+   ================ ACESSIBILIDADE ================
+   ================================================ */
+
+.btn-a11y {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+.btn-a11y[aria-pressed="true"] {
+  font-weight: 600;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+:focus {
+  outline: 3px solid #0e9401;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #0e9401;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  transition: top 0.3s;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* melhora foco visível */
+body.high-contrast :focus {
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 3px !important;
+}
+
+/* remove transparências e gradientes */
+body.high-contrast [style*="background-image"],
+body.high-contrast [style*="linear-gradient"] {
+  background: #000 !important;
+}
+
+/* reduz animações para quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* melhora contraste quando o usuário pede mais contraste */
+@media (prefers-contrast: more) {
+  :root {
+    --a11y-outline: 3px;
+  }
+
+  :focus {
+    outline-width: var(--a11y-outline);
+  }
+}
+
+/* quando o SO força cores, garanta visibilidade do foco */
+@media (forced-colors: active) {
+  :focus {
+    outline: 2px solid CanvasText;
+    outline-offset: 2px;
+  }
+}
+
+/* estado visual quando a11y está ligado manualmente */
+body.a11y-on :focus {
+  outline: 3px solid #0e9401;
+  outline-offset: 3px;
+}
+
+
+/* ================================================
+   ALTO CONTRASTE – ativado com body.high-contrast
+   ================================================ */
+
+body.high-contrast,
+body.high-contrast header,
+body.high-contrast nav,
+body.high-contrast footer,
+body.high-contrast main,
+body.high-contrast section,
+body.high-contrast .container,
+body.high-contrast .secao-entrada,
+body.high-contrast .secao-white,
+body.high-contrast .inspiracao,
+body.high-contrast .grid,
+body.high-contrast .footer-content {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+body.high-contrast .logo img,
+body.high-contrast .footer-logo img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+
+body.high-contrast .alert {
+  background-color: #1c05ee !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+body.high-contrast .submenu,
+body.high-contrast .card,
+body.high-contrast .card-info,
+body.high-contrast .membro-card,
+body.high-contrast .filtros,
+body.high-contrast .acao-box,
+body.high-contrast .form-wrapper,
+body.high-contrast .campanha-card,
+body.high-contrast .form-doacao,
+body.high-contrast .card-projeto,
+body.high-contrast .post-card,
+body.high-contrast .modal-content,
+body.high-contrast .contato-info,
+body.high-contrast .contato-form,
+body.high-contrast .login-wrapper {
+  background-color: #222 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+  box-shadow: none !important;
+}
+
+body.high-contrast .filtros label {
+  color: #fff !important;
+}
+
+body.high-contrast .form-wrapper .subtitulo,
+body.high-contrast .form-group label,
+body.high-contrast .form-doacao legend {
+  color: #ccc !important;
+}
+
+body.high-contrast .form-doacao span {
+  color: #030303 !important;
+}
+
+/* substitui imagens de fundo por preto sólido */
+body.high-contrast .banner-principal,
+body.high-contrast .banner-container {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+/* força todos os textos a ficarem claros */
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast h4,
+body.high-contrast p,
+body.high-contrast li,
+body.high-contrast strong,
+body.high-contrast span,
+body.high-contrast a {
+  color: #fff !important;
+}
+
+/* links e botões */
+body.high-contrast a {
+  color: #00ffff !important;
+  text-decoration: none !important;
+}
+
+body.high-contrast .btn,
+body.high-contrast button,
+body.high-contrast .btn-faca-parte,
+body.high-contrast .btn-login {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid #fff !important;
+}
+
+body.high-contrast .btn:hover {
+  background-color: #ffff00 !important;
+  color: #000 !important;
+}
+
+body.high-contrast .lista-relatorios a {
+  background-color: #222 !important;
+}
+
+body.high-contrast .filtros-categorias a {
+  background-color: #222 !important;
+}
+
+body.high-contrastli a {
+  background-color: #222 !important;
+  color: #1a1212 !important;
+  border: 1px solid #fff !important;
+}
+
+/* badges e destaques */
+body.high-contrast .badge,
+body.high-contrast .badge-primario,
+body.high-contrast .badge-secundario,
+body.high-contrast .badge-info,
+body.high-contrast .badge-alerta {
+  background-color: #222 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}

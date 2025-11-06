@@ -11,12 +11,21 @@ import {
   inicializarFiltrosProjetos,
   inicializarFiltrosBlog
 } from './components.js';
+import { inicializarAcessibilidadeControles } from './acessibility.js';
+import { inicializarContraste } from './acessibility.js';
+
+
 
 /**
  * Ponto de entrada da aplicação.
  * Este evento espera o HTML estar 100% carregado.
  */
 document.addEventListener('DOMContentLoaded', () => {
+
+  // ===== ACESSIBILIDADE (WCAG 2.1 AA) =====
+  inicializarAcessibilidadeControles();
+  inicializarContraste();
+
 
   // --- LÓGICA PARA PÁGINAS PÚBLICAS (index.html, doacoes.html, etc.) ---
   const url = window.location.pathname;

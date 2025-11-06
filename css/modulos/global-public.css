@@ -99,6 +99,9 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
 }
 
 .navbar .container {
@@ -108,6 +111,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 99%;
+  margin: 0 auto;
 }
 
 .logo img {
@@ -284,4 +296,3 @@ footer::before {
   color: #3f3e3e;
   margin: 0;
 }
-
